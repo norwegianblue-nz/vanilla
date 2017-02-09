@@ -1,0 +1,20 @@
+htdocs
+# Ignore things which will be installed by composer Drupal Install 
+drupal-8.x/drush    
+drupal-8.x/scripts
+drupal-8.x/vendor
+drupal-8.x/.travis.yml
+drupal-8.x/composer*
+drupal-8.x/LICENSE
+drupal-8.x/phpunit.xml.dist
+drupal-8.x/README.md
+drupal-8.x/web/core
+drupal-8.x/web/modules
+drupal-8.x/web/profiles
+drupal-8.x/web/.*
+drupal-8.x/web/*.php
+drupal-8.x/web/robots.txt
+drupal-8.x/web/web.config
+drupal-8.x/web/sites/default
+drupal-8.x/web/sites/*.php
+drupal-8.x/web/sites/*.yml

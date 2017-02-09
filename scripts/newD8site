@@ -1,0 +1,62 @@
+#!/bin/bash
+##
+## Script to create the scaffold of a new Drupal8 site.
+## 
+## This uses composer to install core,
+## copies a custom 'sites' directory into place,
+## including settings.local
+## sets up private, tmp and config directories
+
+vanilla=/var/www/vhosts/vanilla
+if [ ! -d $vanilla/drupal-8.x/web ]
+then
+	kdialog --sorry "Drupal vanilla Directory incorrect.\nCheck script $0 \n\nScript will exit" --title "Whoops"
+	exit
+fi
+OLDDIR=$PWD
+
+newsite=$(kdialog --title "New Site Name" --inputbox "Input the new site name (eg mynewsite.com)")
+	ans=$?
+    if [  ! $ans = 0 ]; then
+            exit
+    fi
+examplealias=$newsite-dev
+kdialog --yesno  "Creating $newsite.\nIs this correct? Continue?\n(It will take a few minutes)"
+	ans=$?
+    if [  ! $ans = 0 ]; then
+            exit
+    fi
+mkdir -p /var/www/vhosts/$newsite/private
+mkdir -p /var/www/vhosts/$newsite/tmp
+cd /var/www/vhosts/$newsite
+composer --quiet create-project drupal-composer/drupal-project:8.x-dev drupal-8.x --stability dev --no-interaction
+ln -s drupal-8.x/web htdocs
+cp -a /var/www/vhosts/vanilla/drupal-8.x/web/sites/newsite drupal-8.x/web/sites/$newsite
+cp drupal-8.x/web/sites/example.sites.php drupal-8.x/web/sites/sites.php
+sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.php
+cp $vanilla/scaffold/aliases.drush .
+newsitealias=$(kdialog --title "Drush Alias" --inputbox "Input the Drush Alias for the new site name (eg $examplealias)" "$examplealias")
+sed -i -- 's/newsitealias/'$newsitealias'/g' aliases.drush
+sed -i -- 's/newsite/'$newsite'/g' aliases.drush
+cat aliases.drush >> /etc/drush/aliases.drushrc.php
+cd drupal-8.x
+composer require --quiet "drupal/address"
+composer require --quiet "drupal/admin_toolbar"
+composer require --quiet "drupal/coffee"
+composer require --quiet "drupal/honeypot"
+composer require --quiet "drupal/image_effects"
+composer require --quiet "drupal/imagemagick"
+composer require --quiet "drupal/libraries"
+composer require --quiet "drupal/pathauto"
+composer require --quiet "drupal/token"
+composer require --quiet "drupal/omega"
+composer require --quiet --dev "drupal/devel"
+git init
+cp -f $vanilla/scaffold/gitignore ./.gitignore
+cp -f $vanilla/scaffold/git.info.exclude ./.git/info/exclude
+
+
+
+cd $OLDDIR
+kdialog --msgbox $newsite' created.\nEnsure modules installed\nComposer may have attempted to install an incompatible version\n You may need to specify version, eg:\n\ncomposer require "drupal/imagemagick:1.*@dev"'
+

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the theme.
+ */
+
+/* Retrieve the URI of the images in field_bg_image and load array for Twig to
+ * access. 
+ * The variable bg_imageImageList is available in page.html.twig
+ */
+function parrot-stripes_preprocess_page(&$variables){
+    $node = $variables['node'];
+    if (isset($node->field_bg_image)){
+        $slide = $variables['node']->field_bg_image;
+        $variables['bg_imageImageList'] = array();
+        foreach ($slide as $s) {
+            $image_id = $s->target_id;
+            $image_file  = file_load($image_id);
+            $image_public_uri = $image_file->getFileUri();
+            $variables['bg_imageImageList'][] = file_create_url($image_public_uri);
+        }
+    }
+    //print_r($variables['bg_imageImageList']);
+}
+function parrot-stripes_preprocess_node(&$variables){
+    //kint($variables['node']);
+    //kint($variables);
+    //print_r($variables);
+}
+function parrot-stripes_preprocess_region(&$variables) {
+	//$region = $variables['region'];
+	
+  //var_dump($variables['image']);
+} // END parrot-stripes_preprocess_region

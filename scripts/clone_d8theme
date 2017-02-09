@@ -1,0 +1,68 @@
+#!/bin/bash
+
+#ippath=/var/www/vhosts/drupal-8.x/web/themes
+ippath=/var/www/vhosts/vanilla/drupal-8.x/web/themes/custom
+#ippath=/var/www/vhosts/sandbox.kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom
+if [ ! -d $ippath ]
+then
+	kdialog --sorry "Theme Base Directory incorrect.\nCheck script $0 \n\nScript will exit" --title "Whoops"
+	exit
+fi
+
+starttheme=$(kdialog --combobox "Select a start theme:" "Parrot" "Parrot-stripes")
+newthmname=$(kdialog --title "Theme Name" --inputbox "Input the new theme name (no spaces)")
+newsite=$(kdialog --title "Web Site" --inputbox "Input the local website which $newthmname is for")
+icstarttheme=${starttheme^}
+lcstarttheme=${starttheme,,}
+ucstarttheme=${starttheme^^}
+icthmname=${newthmname^}
+lcthmname=${newthmname,,}
+ucthmname=${newthmname^^}
+
+newthemedir=/var/www/vhosts/$newsite/drupal-8.x/web/sites/$newsite/themes/custom/$lcthmname
+
+DIR=$(pwd)
+cd $ippath
+
+#debug
+#kdialog --title "Starter Theme:" --passivepopup  $icstarttheme'\n'$lcstarttheme'\n'$ucstarttheme 30
+#kdialog --title "New Theme:" --passivepopup  "$lcthmname" 5
+
+#gubed
+
+
+if [ -d $newthemedir ]
+then
+	kdialog --title "Theme Exists" --warningcontinuecancel "A theme named $icthmname already exists. \n If you continue it will be deleted"
+	ans=$?
+    if [  ! $ans = 0 ]; then
+            exit
+    else
+    	rm -rf $newthemedir
+    	#kdialog --title "Warning" --passivepopup  "$lcthmname deleted" 5
+    fi
+fi
+#Copy the whole directory
+cp -a $lcstarttheme $newthemedir
+#Change the names of files in the new directory
+cd $newthemedir
+for file in $(find . -name \*$lcstarttheme\* -exec ls -1 {} \; )
+	do
+		mv $file ${file/$lcstarttheme/$lcthmname}
+	done
+for file in $(find . -name \*$icstarttheme\* -exec ls -1 {} \; )
+	do
+		mv $file ${file/$icstarttheme/$icthmname}
+	done
+for file in $(find . -name \*$ucstarttheme\* -exec ls -1 {} \; )
+	do
+		mv $file ${file/$ucstarttheme/$ucthmname}
+	done
+#Change all mention of starter theme name to new theme name in all files
+grep -rl $lcstarttheme . | xargs sed -i "s/$lcstarttheme/$lcthmname/g"
+grep -rl $icstarttheme . | xargs sed -i "s/$icstarttheme/$icthmname/g"
+grep -rl $ucstarttheme . | xargs sed -i "s/$ucstarttheme/$ucthmname/g"
+
+
+cd $DIR
+kdialog --title "Complete" --passivepopup "New theme\n'$icthmname'\ncloned from\n$icstarttheme" 

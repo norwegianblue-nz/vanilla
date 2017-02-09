@@ -1,0 +1,29 @@
+$aliases["newsitealias"] = array (
+  'root' => '/var/www/vhosts/newsite/htdocs',
+  'uri' => 'http://newsite',
+  'path-aliases' => 
+  array (
+    '%drush' => '/var/www/vhosts/newsite/drupal-8.x/vendor/drush/drush',
+    '%site' => 'sites/newsite/',
+  ),
+  'databases' => 
+  array (
+    'default' => 
+    array (
+      'default' => 
+      array (
+        'database' => 'drupal8db',
+        'username' => 'd8user',
+        'password' => 'drup4l',
+        'prefix' => 
+        array (
+          'default' => 'newsite_',
+        ),
+        'host' => 'localhost',
+        'port' => '3306',
+        'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+        'driver' => 'mysql',
+      ),
+    ),
+  ),
+);

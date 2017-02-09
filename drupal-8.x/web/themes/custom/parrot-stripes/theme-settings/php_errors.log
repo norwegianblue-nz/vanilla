@@ -1,0 +1,166 @@
+[24-Sep-2016 09:50:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php on line 7
+[24-Sep-2016 09:50:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php on line 6
+[24-Sep-2016 09:50:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php on line 5
+[24-Sep-2016 09:50:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php on line 7
+[24-Sep-2016 09:50:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php on line 6
+[24-Sep-2016 09:50:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php on line 16
+[24-Sep-2016 09:50:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php on line 6
+[24-Sep-2016 09:50:13 UTC] PHP Notice:  Undefined variable: theme in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[24-Sep-2016 09:50:13 UTC] PHP Notice:  Undefined variable: force_theme_export in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[24-Sep-2016 09:50:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php on line 5
+[24-Sep-2016 10:06:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php on line 7
+[24-Sep-2016 10:06:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php on line 6
+[24-Sep-2016 10:06:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php on line 5
+[24-Sep-2016 10:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php on line 7
+[24-Sep-2016 10:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php on line 6
+[24-Sep-2016 10:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php on line 16
+[24-Sep-2016 10:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php on line 6
+[24-Sep-2016 10:06:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php on line 5
+[27-Sep-2016 01:32:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php on line 7
+[27-Sep-2016 01:32:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php on line 6
+[27-Sep-2016 01:32:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php on line 5
+[27-Sep-2016 01:32:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php on line 7
+[27-Sep-2016 01:32:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php on line 6
+[27-Sep-2016 01:32:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php on line 16
+[27-Sep-2016 01:32:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php on line 6
+[27-Sep-2016 01:32:12 UTC] PHP Notice:  Undefined variable: theme in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[27-Sep-2016 01:32:12 UTC] PHP Notice:  Undefined variable: force_theme_export in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[27-Sep-2016 01:32:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php on line 5
+[27-Sep-2016 02:01:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php on line 7
+[27-Sep-2016 02:01:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php on line 6
+[27-Sep-2016 02:01:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php on line 5
+[27-Sep-2016 02:01:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php on line 7
+[27-Sep-2016 02:01:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php on line 6
+[27-Sep-2016 02:01:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php on line 16
+[27-Sep-2016 02:01:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php on line 6
+[27-Sep-2016 02:01:55 UTC] PHP Notice:  Undefined variable: theme in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[27-Sep-2016 02:01:55 UTC] PHP Notice:  Undefined variable: force_theme_export in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/core-settings.php on line 20
+[27-Sep-2016 02:01:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php on line 5
+[27-Sep-2016 04:38:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/debug-settings.php on line 5
+[27-Sep-2016 04:38:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/export-settings.php on line 16
+[27-Sep-2016 04:38:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/general-settings.php on line 6
+[27-Sep-2016 04:38:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-config.php on line 7
+[27-Sep-2016 04:38:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/layout-settings.php on line 7
+[27-Sep-2016 04:38:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/omega-intro.php on line 5
+[27-Sep-2016 04:38:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/scss-settings.php on line 6
+[27-Sep-2016 04:38:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/dspealing/web/sites/dspealing/themes/custom/parrot-stripes/theme-settings/style-settings.php on line 6
