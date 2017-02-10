@@ -45,20 +45,6 @@ $settings['file_private_path'] = '/var/www/vhosts/newsite/private';
  */
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
-/**
- * Database settings:
- */
-
-$databases['default']['default'] = array (
-  'database' => 'databasename',
-  'username' => 'databaseuser',
-  'password' => 'password',
-  'prefix' => 'newsite_',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'config/sync';
 
