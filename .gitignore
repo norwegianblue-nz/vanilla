@@ -18,3 +18,6 @@ drupal-8.x/web/web.config
 drupal-8.x/web/sites/default
 drupal-8.x/web/sites/*.php
 drupal-8.x/web/sites/*.yml
+
+
+drupal-8.x/web/sites/*/settings.local.php
