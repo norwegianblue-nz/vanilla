@@ -9,7 +9,7 @@ then
 	exit
 fi
 
-starttheme=$(kdialog --combobox "Select a start theme:" "Parrot" "Parrot-stripes")
+starttheme=$(kdialog --combobox "Select a start theme:" "Parrot" "Parrotstripes" "Plingcom2" "krtk0")
 newthmname=$(kdialog --title "Theme Name" --inputbox "Input the new theme name (no spaces)")
 newsite=$(kdialog --title "Web Site" --inputbox "Input the local website which $newthmname is for")
 icstarttheme=${starttheme^}

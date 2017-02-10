@@ -1,0 +1,1628 @@
+/* rgb(0,115,123)*/
+/* rgb(0,65,70)*/
+/* rgb(0,163,182)*/
+/* rgb(232,71,77)*/
+/* rgb(154,154,35)*/
+/* rgb(114,115,24)*/
+/* rgb(219,79,20)*/
+/* rgb(135,47,7)*/
+/* rgb(226,224,201)*/
+/* rgb(??)*/
+/* rgb(??)*/
+/* Fonts */
+body {
+  width: 100%;
+  min-width: 960px;
+  *zoom: 1;
+}
+body:before, body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+p a {
+  border: none !important;
+  color: #00737B;
+}
+
+#block-logohomepage {
+  z-index: -200;
+  position: relative;
+}
+
+/* To fix tool bar unclickable on logged in */
+#page div#logo-home {
+  width: 250px;
+  position: absolute;
+  margin: 0 auto;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  left: 50%;
+  margin-left: -90px;
+  top: 5vh;
+}
+
+#page.scrolled div#logo-home {
+  width: 75px;
+  position: absolute;
+  top: -65px;
+  left: 0;
+  margin-left: 0;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  float: left;
+  height: 50px;
+}
+
+#block-logogeneralpages {
+  float: left;
+  margin-top: 5px;
+}
+
+#page #block-logogeneralpages img {
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+#page.scrolled #block-logogeneralpages img {
+  width: 60%;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  margin-top: -10px;
+}
+
+#menu-outer-wrapper {
+  background-color: rgba(0, 115, 123, 0.8);
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  padding-top: 10px;
+}
+
+div#block-statictopmenu {
+  text-align: center;
+}
+
+#block-statictopmenu ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0.5em;
+  padding: 0;
+}
+
+#block-statictopmenu li {
+  display: inline-block;
+  list-style: none;
+  font-family: "exo_2regular_condensed", sans-serif;
+  font-transform: uppercase;
+  font-size: 25px;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/menu-marker.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 45px;
+  padding: 0px 20px;
+}
+
+#block-statictopmenu li a {
+  color: #fff;
+  padding: 2px 2px 20px;
+}
+
+#block-statictopmenu div.contextual {
+  display: none !important;
+}
+
+#block-krtktoolbar {
+  float: right;
+  background-color: #004146;
+  width: 220px;
+  padding: 2px 5px 2px 115px;
+  clear: right;
+}
+
+#block-krtktoolbar a {
+  line-height: 0;
+}
+
+.tool-bar-icon {
+  display: inline-block;
+  margin: 3px 1px;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.tool-bar-icon.clicked {
+  background-color: #fff;
+}
+
+.tool-bar-icon-info {
+  display: none;
+}
+
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {
+  width: 580px !important;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 0;
+  float: right;
+  clear: right;
+  background-color: #004146;
+  padding: 15px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 30;
+  display: none;
+}
+#block-krtk0-search:first-of-type, #block-userlogin:first-of-type, #block-toolbarinfo:first-of-type, #block-useraccountmenu:first-of-type {
+  margin-left: 0;
+}
+#block-krtk0-search:last-of-type, #block-userlogin:last-of-type, #block-toolbarinfo:last-of-type, #block-useraccountmenu:last-of-type {
+  margin-right: 0;
+}
+
+div#block-krtk0-search.expand, div#block-userlogin.expand {
+  display: block;
+}
+
+body.user-logged-in nav#block-useraccountmenu.expand {
+  display: block;
+}
+
+#block-krtk0-search #edit-keys, #block-userlogin input.form-text {
+  width: 80%;
+  padding: 13px;
+  font-size: 18px;
+  color: #888;
+  border: none;
+}
+
+#block-userlogin label.js-form-required {
+  width: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "exo_2regular_condensed", sans-serif;
+  font-size: 14px;
+}
+
+input.button,
+#block-useraccountmenu ul.menu li,
+.button {
+  padding: 16px;
+  background-color: #00737B;
+  border: none;
+  color: #fff;
+  margin: 0 !important;
+  text-transform: uppercase;
+  font-family: "exo_2regular_condensed", sans-serif;
+  font-size: 14px;
+}
+
+#block-krtk0-search input.button, #block-userlogin input.button {
+  float: right;
+}
+
+#block-useraccountmenu ul.menu li a {
+  color: #fff;
+}
+
+#block-userlogin div.item-list ul {
+  margin: 0;
+}
+
+#block-userlogin div.item-list li {
+  margin: 0 0 0 76px;
+  margin: 0 0 0 76px;
+  width: 160px;
+  border: 1px #00737B solid;
+  display: block;
+}
+
+#block-userlogin div.item-list li a {
+  color: #fff;
+  display: block;
+  padding: 12px 6px 16px 10px;
+}
+
+@media all and (max-width: 559px) {
+  #block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {
+    width: 100% !important;
+  }
+
+  #block-userlogin input.form-text {
+    width: 65%;
+  }
+}
+#krtk0-letterbox {
+  height: 30vh;
+  min-height: 19em;
+  background: transparent;
+}
+
+#header-outer-wrapper {
+  background-color: rgba(0, 115, 123, 0.8);
+}
+
+#block-krtk0-branding {
+  display: none;
+}
+
+#block-logostrapfrontpage h2 {
+  text-align: center;
+  color: #fff;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-size: 21px;
+  margin: 2em 0;
+}
+
+/*body.path-frontpage*/
+#btns-outer-wrapper {
+  /* re-instate frontpage once zones defined */
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-button-bar-bg.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  padding-top: 2em;
+}
+
+body.node--type-meet-the-locals #btns-outer-wrapper,
+body.node--type-meetlocals #btns-outer-wrapper {
+  /* MAY CHANGE once zones targeting finalised */
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/locals-zone-bar-bg-top.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  padding-top: 2em;
+}
+
+div#block-krtk0-mainbuttons {
+  width: 99.9%;
+  text-align: center;
+  margin: 5px auto;
+}
+
+div.zone-button {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+div.zone-button p {
+  line-height: 1em;
+  margin: 0;
+}
+
+div.zone-button p a {
+  color: #fff;
+  font-family: "work_sanslight", sans-serif;
+  font-size: 18px;
+}
+
+div#block-mainbuttons-2 {
+  margin: 7px auto;
+}
+
+#block-mainbuttons-2 {
+  width: 60%;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+#block-mainbuttons-2 div.zone-button img {
+  width: 60px;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+/* narrower icon for general pages */
+#page.scrolled #block-mainbuttons-2 div.zone-button img {
+  width: 50px;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+/* smaller icon on scroll */
+#page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {
+  display: none;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+}
+
+/* hide text on scroll */
+h2.zone-title, h2.zone-title a {
+  color: #fff;
+  font-size: 30px;
+  font-family: "exo_2regular_condensed", sans-serif;
+  text-transform: lowercase;
+  margin: 0.3em 0;
+  font-weight: normal;
+}
+
+h2.zone-title img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+body.path-frontpage #teaser-outer-wrapper {
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-color: #00737B;
+  border-bottom: 1.5em solid #fff;
+}
+
+#block-meettheteamtitle h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #E2E0C9;
+}
+
+@media all and (max-width: 959px) {
+  #block-views-block-krtk-leadership-team-members {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  #block-views-block-krtk-leadership-team-members:first-of-type {
+    margin-left: 0;
+  }
+  #block-views-block-krtk-leadership-team-members:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-meettheteamintro {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  #block-meettheteamintro:first-of-type {
+    margin-left: 0;
+  }
+  #block-meettheteamintro:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-views-block-front-page-team .view-front-page-team div.views-row {
+    width: 27.5%;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #block-views-block-krtk-leadership-team-members {
+    width: 460px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #block-views-block-krtk-leadership-team-members:first-of-type {
+    margin-left: 0;
+  }
+  #block-views-block-krtk-leadership-team-members:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-meettheteamintro {
+    width: 460px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #block-meettheteamintro:first-of-type {
+    margin-left: 0;
+  }
+  #block-meettheteamintro:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-views-block-krtk-leadership-team-members {
+    margin-left: 0 !important;
+  }
+}
+@media all and (min-width: 1280px) {
+  #block-views-block-krtk-leadership-team-members {
+    width: 580px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #block-views-block-krtk-leadership-team-members:first-of-type {
+    margin-left: 0;
+  }
+  #block-views-block-krtk-leadership-team-members:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-meettheteamintro {
+    width: 580px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #block-meettheteamintro:first-of-type {
+    margin-left: 0;
+  }
+  #block-meettheteamintro:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-views-block-krtk-leadership-team-members {
+    margin-left: 0 !important;
+  }
+}
+#block-views-block-krtk-leadership-team-members {
+  float: left;
+}
+
+#block-meettheteamintro {
+  float: right;
+}
+
+#block-views-block-krtk-leadership-team-members div.views-row {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 137px;
+  margin-right: 20px;
+}
+
+#block-views-block-krtk-leadership-team-members div.views-row:last-of-type {
+  margin-right: 0;
+}
+
+#block-meettheteamintro p {
+  font-family: "work_sanshairline", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -0.2em;
+}
+
+#block-views-block-krtk-leadership-team-members h2 {
+  font-size: 20px !important;
+  font-family: "exo_2medium_condensed", sans-serif;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+#block-views-block-krtk-leadership-team-members h2 a {
+  color: #fff;
+}
+
+#block-views-block-krtk-leadership-team-members .pager__items {
+  text-align: left;
+}
+
+#block-views-block-krtk-leadership-team-members nav.pager ul {
+  margin: 50px 0;
+  padding: 0;
+}
+
+#block-views-block-krtk-leadership-team-members nav.pager li a {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 5px 12px;
+  margin: 7px 0px;
+  color: #fff;
+  background-color: #E8474D;
+}
+
+#block-views-block-krtk-leadership-team-members nav.pager li {
+  padding-left: 0;
+}
+
+#block-views-block-krtk-leadership-team-members nav.pager li.pager__item.is-active a {
+  color: #444;
+}
+
+.path-frontpage #preface-outer-wrapper {
+  /* kid zone - background and title background for home page only */
+  background-color: #fff;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-kidszone-bg-texture.jpg");
+  border-top: 200px solid;
+  border-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg") 100;
+}
+
+@media all and (max-width: 959px) {
+  .path-frontpage #preface-outer-wrapper {
+    border-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg") 200;
+  }
+}
+.path-frontpage #content-outer-wrapper {
+  /* about zone - background and title background for home page only */
+  background-color: #fff;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-about-bg-texture.jpg");
+  border-top: 200px solid;
+  border-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg") 100;
+}
+
+@media all and (max-width: 959px) {
+  .path-frontpage #content-outer-wrapper {
+    border-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg") 200;
+  }
+}
+#block-zonetitleabout-front h2 a,
+#block-zonetitlehomeinterimmeetthelocals h2 a {
+  width: 100%;
+  display: block;
+  padding: 10px 10px 4px;
+}
+
+#block-zonetitleabout-front,
+#block-zonetitlehomeinterimmeetthelocals h2 {
+  margin-top: -88px !important;
+  margin: 0 0 4em;
+  background-color: #00737B;
+  background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+#block-zonetitlehomeinterimmeetthelocals h2 {
+  background-color: #9A9A23;
+}
+
+body.node--type-article #title-bar-wrapper,
+body.path-articles #title-bar-wrapper,
+body.node--type-page #title-bar-wrapper,
+body.path-meet-locals #title-bar-wrapper {
+  min-height: 50px;
+  background-color: #fff;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg");
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+body.node--type-meet-the-locals #title-bar-wrapper,
+body.node--type-meetlocals #title-bar-wrapper {
+  min-height: 50px;
+  background-color: #fff;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/bottom-locals-title-bar-bg.svg");
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+#content-outer-wrapper {
+  background-color: #fff;
+}
+
+#main-layout {
+  padding-bottom: 5em;
+}
+
+.node--type-page div.node__content {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  -webkit-column-width: 300px;
+  /* Chrome, Safari, Opera */
+  -moz-column-width: 300px;
+  /* Firefox */
+  column-width: 300px;
+  -webkit-column-gap: 10px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 10px;
+  /* Firefox */
+  column-gap: 10px;
+  -webkit-column-rule: 1px;
+  /* Chrome, Safari, Opera */
+  -moz-column-rule: 1px;
+  /* Firefox */
+  column-rule: 1px;
+}
+
+@media all and (max-width: 959px) {
+  div.node.ds-2col > .group-left {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  div.node.ds-2col > .group-left:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-left:last-of-type {
+    margin-right: 0;
+  }
+
+  div.node.ds-2col > .group-right {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  div.node.ds-2col > .group-right:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-right:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  div.node.ds-2col > .group-left {
+    width: 700px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div.node.ds-2col > .group-left:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-left:last-of-type {
+    margin-right: 0;
+  }
+
+  div.node.ds-2col > .group-right {
+    width: 220px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div.node.ds-2col > .group-right:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-right:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1280px) {
+  div.node.ds-2col > .group-left {
+    width: 880px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div.node.ds-2col > .group-left:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-left:last-of-type {
+    margin-right: 0;
+  }
+
+  div.node.ds-2col > .group-right {
+    width: 280px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  div.node.ds-2col > .group-right:first-of-type {
+    margin-left: 0;
+  }
+  div.node.ds-2col > .group-right:last-of-type {
+    margin-right: 0;
+  }
+}
+#block-krtk0-content figure {
+  margin: 0.6em 20px 1em 0;
+}
+
+#block-krtk0-content .caption > figcaption {
+  font-size: 1.3em;
+  padding: 5px 0 1em 0;
+  color: #004146;
+}
+
+#block-krtk0-content h2 {
+  font-size: 1.9em;
+  font-family: "exoregular", sans-serif;
+  font-weight: normal;
+  color: #DB4F14;
+  padding-top: 0.5em;
+}
+
+#block-krtk0-content h3 {
+  font-size: 1.5em;
+  font-family: "exoregular", sans-serif;
+  font-weight: normal;
+  color: #00737B;
+  padding-top: 0.5em;
+}
+
+#block-krtk0-content li {
+  font-size: 1.5em;
+  padding: 0 0 20px 60px;
+}
+
+#block-krtk0-content ol,
+#block-krtk0-content ul {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+#block-krtk0-content ol li {
+  counter-increment: step-counter;
+}
+
+#block-krtk0-content ol li::before,
+#block-krtk0-content ul li::before {
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #00A3B6;
+  color: #727318;
+  font-weight: normal;
+  padding: 1px 3px 1px 5px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  min-width: 35px;
+}
+
+#block-krtk0-content ol li::before {
+  content: counter(step-counter);
+}
+
+#block-krtk0-content ul li::before {
+  content: ">";
+}
+
+.field--name-dynamic-block-fieldnode-latest-news.field--type-ds.field--label-above .field__label {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #DB4F14;
+  font-size: 2em;
+}
+
+.responsive-iframe {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.responsive-iframe iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: none;
+}
+
+body.node--type-article .field--taxonomy-terms {
+  background-color: #DB4F14;
+}
+
+body.node--type-article .field--taxonomy-terms div.field__label {
+  font-size: 1.9em;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: normal;
+  color: #E2E0C9;
+  margin: 1em 1em 0.1em 1em;
+  padding-top: 0.5em;
+}
+
+body.node--type-article .field--taxonomy-terms div.field__label::after {
+  content: "Check out these related article topics:";
+  display: block;
+  font-size: 18px;
+  font-family: "work_sanslight", sans-serif;
+}
+
+body.node--type-article .field-item--taxonomy-term.field__item {
+  display: inline;
+  margin-right: 15.5px;
+}
+
+body.node--type-article .field-item--taxonomy-term a {
+  background-color: #872F07;
+  color: #E2E0C9;
+  font-size: 18px;
+  font-family: "exo_2regular_condensed", sans-serif;
+  padding: 10px 10px;
+  margin: 10px 0;
+  background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+@media all and (max-width: 599px) {
+  body.node--type-article .field-item--taxonomy-term a {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  body.node--type-article .field-item--taxonomy-term a:first-of-type {
+    margin-left: 0;
+  }
+  body.node--type-article .field-item--taxonomy-term a:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  body.node--type-article .field-item--taxonomy-term a {
+    width: 48% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  body.node--type-article .field-item--taxonomy-term a:first-of-type {
+    margin-left: 0;
+  }
+  body.node--type-article .field-item--taxonomy-term a:last-of-type {
+    margin-right: 0;
+  }
+
+  body.node--type-article .field-item--taxonomy-term.field__item a:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  body.node--type-article .field-item--taxonomy-term a {
+    width: 300px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  body.node--type-article .field-item--taxonomy-term a:first-of-type {
+    margin-left: 0;
+  }
+  body.node--type-article .field-item--taxonomy-term a:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1280px) {
+  body.node--type-article .field-item--taxonomy-term a {
+    width: 280px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  body.node--type-article .field-item--taxonomy-term a:first-of-type {
+    margin-left: 0;
+  }
+  body.node--type-article .field-item--taxonomy-term a:last-of-type {
+    margin-right: 0;
+  }
+}
+body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
+  background-color: #E2E0C9;
+  padding: 0 20px 20px 20px;
+}
+
+body.node--type-article .field--label-above.comment-wrapper h2.title {
+  font-size: 1.9em;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: normal;
+  color: #872F07;
+  margin: 1em 1em 0.1em 1em;
+  padding-top: 0.5em;
+}
+
+body.node--type-article .comment__content {
+  margin-left: 2%;
+  width: 98%;
+  background-color: #fff;
+}
+
+body.node--type-article .comment-meta {
+  margin-left: 23px;
+}
+
+.view-article-summary > div.view-content,
+.view-taxonomy-term > div.view-content {
+  font-size: 0;
+}
+
+.view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 14px;
+}
+
+@media all and (max-width: 599px) {
+  .view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+    width: 135px;
+    margin-right: 20px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  .view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+    width: 31.33333% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .view-article-summary div.views-row:first-of-type, .view-taxonomy-term div.views-row:first-of-type {
+    margin-left: 0;
+  }
+  .view-article-summary div.views-row:last-of-type, .view-taxonomy-term div.views-row:last-of-type {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(5) {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(4) {
+    margin-left: 0;
+  }
+
+  .view-article-summary div.views-row img, .view-taxonomy-term div.views-row img {
+    width: 100% !important;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  .view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+    width: 220px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .view-article-summary div.views-row:first-of-type, .view-taxonomy-term div.views-row:first-of-type {
+    margin-left: 0;
+  }
+  .view-article-summary div.views-row:last-of-type, .view-taxonomy-term div.views-row:last-of-type {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(4) {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(5) {
+    margin-left: 0;
+  }
+}
+@media all and (min-width: 1280px) {
+  .view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+    width: 280px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .view-article-summary div.views-row:first-of-type, .view-taxonomy-term div.views-row:first-of-type {
+    margin-left: 0;
+  }
+  .view-article-summary div.views-row:last-of-type, .view-taxonomy-term div.views-row:last-of-type {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(4) {
+    margin-right: 0;
+  }
+
+  .view-article-summary div.views-row:nth-of-type(5) {
+    margin-left: 0;
+  }
+}
+.view-article-summary div.views-row .field--name-node-title,
+.view-taxonomy-term div.views-row .node--type-article h2 {
+  font-size: 1.7em;
+  line-height: 1.2em;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.view-article-summary div.views-row .field--name-node-title h2 a,
+.view-taxonomy-term div.views-row .node--type-article h2 a {
+  color: #00737B;
+}
+
+.view-article-summary div.views-row .field--name-node-post-date {
+  font-size: 1.3em;
+  line-height: 1.25em;
+  color: #00A3B6;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: 200;
+  margin: 0 0 0.1em;
+}
+
+.view-article-summary div.views-row a.readmore-btn,
+.view-taxonomy-term div.views-row li.node-readmore {
+  background-color: #00737B;
+  display: block;
+  color: #00737B;
+  background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 3em;
+  margin: -6px 0 0 0;
+}
+
+.view-taxonomy-term div.views-row li.node-readmore a {
+  color: #fff;
+  padding: 18px;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: 200;
+  font-size: 1.3em;
+}
+
+div.node--type-meetlocals .group-left .field--name-node-title h2,
+div.node--type-meetlocals .field--name-field-maori-name {
+  font-size: 3em;
+  line-height: 1em;
+  color: #9A9A23;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+div.node--type-meetlocals .field--name-field-maori-name div {
+  display: inline;
+}
+
+div.node--type-meetlocals .field--name-field-latinname {
+  font-size: 20px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+.paragraph--type-locals3panel > div, .paragraph--type-locals2panel > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.paragraph--type-locals3panel,
+.paragraph--type-locals2panel {
+  display: flex;
+}
+
+.paragraph--type-locals3panel .field__label,
+.paragraph--type-locals2panel .field__label {
+  font-size: 18px;
+  font-family: "exoitalic", sans-serif;
+  font-weight: normal;
+  color: #872F07;
+}
+
+.paragraph--type-locals3panel .field__item,
+.paragraph--type-locals3panel h2,
+.paragraph--type-locals2panel h2 {
+  font-size: 26px;
+  font-family: "exoregular", sans-serif;
+  color: #fff;
+  margin: 0 0 0.4em;
+}
+
+.paragraph--type-locals3panel .field__item a, .paragraph--type-locals2panel h2 a {
+  color: #fff;
+}
+
+.paragraph--type-locals3panel > div {
+  padding: 70px 10px 10px 10px;
+  text-align: center;
+}
+
+.paragraph--type-locals2panel > div {
+  padding: 10px 10px 10px 80px;
+  text-align: left;
+}
+
+.paragraph--type-locals3panel div.group-left {
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/nz-icon.png") no-repeat center 10px #9A9A23;
+}
+
+.paragraph--type-locals3panel div.group-middle {
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/status-icon.png") no-repeat center 10px #9A9A23;
+}
+
+.paragraph--type-locals3panel div.group-right {
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/strategy-icon.png") no-repeat center 10px #9A9A23;
+}
+
+.paragraph--type-locals2panel div.group-left {
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/trophic-icon.png") no-repeat 15px 50% #9A9A23;
+}
+
+.paragraph--type-locals2panel div.group-right {
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/habitat-icon.png") no-repeat 15px 50% #9A9A23;
+}
+
+@media all and (max-width: 959px) {
+  .paragraph--type-locals3panel > div {
+    width: 98% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .paragraph--type-locals3panel > div:first-of-type {
+    margin-left: 0;
+  }
+  .paragraph--type-locals3panel > div:last-of-type {
+    margin-right: 0;
+  }
+
+  .paragraph--type-locals2panel > div {
+    width: 100%;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  .paragraph--type-locals3panel > div {
+    width: 220px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .paragraph--type-locals3panel > div:first-of-type {
+    margin-left: 0;
+  }
+  .paragraph--type-locals3panel > div:last-of-type {
+    margin-right: 0;
+  }
+
+  .paragraph--type-locals2panel > div {
+    width: 47.1%;
+  }
+
+  .paragraph--type-locals2panel > div.group-left {
+    margin-right: 10px;
+  }
+
+  .paragraph--type-locals2panel > div.group-right {
+    margin-left: 10px;
+  }
+}
+@media all and (min-width: 1280px) {
+  .paragraph--type-locals3panel > div {
+    width: 280px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .paragraph--type-locals3panel > div:first-of-type {
+    margin-left: 0;
+  }
+  .paragraph--type-locals3panel > div:last-of-type {
+    margin-right: 0;
+  }
+
+  .paragraph--type-locals2panel > div {
+    width: 47.7%;
+  }
+
+  .paragraph--type-locals2panel > div.group-left {
+    margin-right: 10px;
+  }
+
+  .paragraph--type-locals2panel > div.group-right {
+    margin-left: 10px;
+  }
+}
+.node--type-meetlocals div#block-krtk0-content h2 {
+  font-family: "exo_2light_expanded", sans-serif;
+  font-size: 31px;
+  line-height: 1.5em;
+  margin: 0;
+  color: #DB4F14;
+}
+
+.node--type-meetlocals div.field--name-body h3 {
+  color: #004146;
+  font-size: 22px;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.field--name-field-more-info.field--type-entity-reference-revisions.field--label-above .field__label {
+  font-size: 1.5em;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #fff;
+  display: block;
+  padding: 10px 5px 10px 80px;
+  background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/link-icon.png") no-repeat 8px 50% #9A9A23;
+}
+
+.field--name-field-url.field--type-link.field--label-hidden.field__item a {
+  display: block;
+  color: #fff;
+  margin: 10px 0 0;
+  padding: 15px 58px 15px 10px;
+  background: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png) no-repeat #727318 right 50%;
+  font-size: 1.2em;
+}
+
+.field--name-field-link-descriptions.field--type-string.field--label-hidden.field__item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: 0px;
+  font-size: 1.15em;
+}
+
+.node--type-meet-the-locals.node--view-mode-teaser h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #9A9A23;
+}
+
+.node--type-meet-the-locals.node--view-mode-teaser h2 a {
+  color: #9A9A23;
+}
+
+.node--type-meet-the-locals.node--view-mode-teaser .node__links {
+  display: block;
+  background-color: #9A9A23;
+  padding: 10px;
+  width: 150px;
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.node--type-meet-the-locals.node--view-mode-teaser .node__links a {
+  color: #fff;
+}
+
+#social-outer-wrapper {
+  background-color: #00A3B6;
+  padding-bottom: 4em;
+}
+
+#socialBlock-icons, #socialBlock-facebook {
+  width: 49.7%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#socialBlock-title {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #fff;
+}
+
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p {
+  font-family: "work_sanshairline", sans-serif;
+  font-size: 51px;
+  color: #444;
+  text-align: center;
+  text-transform: initial;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::before {
+  content: open-quote;
+}
+
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::after {
+  content: close-quote;
+}
+
+#extras-outer-wrapper {
+  background-color: #00A3B6;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  padding-bottom: 2em;
+  border-bottom: solid 10px #fff;
+  /* background-size: 350%; - Change for breakpoints */
+}
+
+body.path-frontpage #extras-outer-wrapper {
+  min-height: 2em;
+  background-color: #E2E0C9;
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border-front.svg");
+}
+
+#extras-layout h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #fff;
+  margin-top: 1em;
+}
+
+#block-views-block-front-page-display-items-partner-logos h2 a,
+#block-views-block-front-page-display-items-block-1 h2 a {
+  background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+  width: 250px;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.view-front-page-display-items .view-content {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.view-front-page-display-items .views-row {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.view-display-id-partner_logos .views-row:last-of-type::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#footer-header-outer-wrapper {
+  background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/footer-title-bg.png");
+  background-position: top;
+  background-repeat: repeat-x;
+  background-color: #fff;
+  border-top: 5em solid #fff;
+}
+
+@media all and (max-width: 959px) {
+  #block-charityfooternumber {
+    width: 64.66667% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+    float: left;
+    padding-top: 40px;
+  }
+  #block-charityfooternumber:first-of-type {
+    margin-left: 0;
+  }
+  #block-charityfooternumber:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-footertitlekrtklogo {
+    width: 31.33333% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+    float: right;
+    padding-top: 20px;
+  }
+  #block-footertitlekrtklogo:first-of-type {
+    margin-left: 0;
+  }
+  #block-footertitlekrtklogo:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #block-charityfooternumber {
+    width: 620px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    padding-top: 40px;
+  }
+  #block-charityfooternumber:first-of-type {
+    margin-left: 0;
+  }
+  #block-charityfooternumber:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-footertitlekrtklogo {
+    width: 300px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right;
+    padding-top: 20px;
+  }
+  #block-footertitlekrtklogo:first-of-type {
+    margin-left: 0;
+  }
+  #block-footertitlekrtklogo:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1280px) {
+  #block-charityfooternumber {
+    width: 780px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    padding-top: 40px;
+  }
+  #block-charityfooternumber:first-of-type {
+    margin-left: 0;
+  }
+  #block-charityfooternumber:last-of-type {
+    margin-right: 0;
+  }
+
+  #block-footertitlekrtklogo {
+    width: 380px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right;
+    padding-top: 20px;
+  }
+  #block-footertitlekrtklogo:first-of-type {
+    margin-left: 0;
+  }
+  #block-footertitlekrtklogo:last-of-type {
+    margin-right: 0;
+  }
+}
+#block-charityfooternumber h2 {
+  font-size: 20px;
+  font-family: "exo_2medium_condensed", sans-serif;
+  color: #004146;
+}
+
+#block-charityfooternumber p {
+  font-size: 15px;
+  color: #575757;
+}
+
+#footer-outer-wrapper {
+  background-color: #004146;
+  padding-bottom: 3em;
+}
+
+div.region-footer > div, div.region-footer > nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media all and (max-width: 959px) {
+  div.region-footer > div, div.region-footer > nav {
+    width: 48% !important;
+    margin-right: 1%;
+    margin-left: 1%;
+    float: left;
+    padding-top: 40px;
+  }
+  div.region-footer > div:first-of-type, div.region-footer > nav:first-of-type {
+    margin-left: 0;
+  }
+  div.region-footer > div:last-of-type, div.region-footer > nav:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  div.region-footer > div, div.region-footer > nav {
+    width: 220px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    padding-top: 40px;
+  }
+  div.region-footer > div:first-of-type, div.region-footer > nav:first-of-type {
+    margin-left: 0;
+  }
+  div.region-footer > div:last-of-type, div.region-footer > nav:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 1280px) {
+  div.region-footer > div, div.region-footer > nav {
+    width: 280px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+    padding-top: 40px;
+  }
+  div.region-footer > div:first-of-type, div.region-footer > nav:first-of-type {
+    margin-left: 0;
+  }
+  div.region-footer > div:last-of-type, div.region-footer > nav:last-of-type {
+    margin-right: 0;
+  }
+}
+div.region-footer > div#block-footersocialicons,
+div.region-footer > div#block-footercontactsblock {
+  width: 100%;
+  clear: both;
+}
+
+div.region-footer > div#block-footersocialicons {
+  margin: 1.5em 0 1em 0;
+}
+
+.region-footer h2 {
+  font-size: 1.5em;
+  font-family: "exo_2light_condensed", sans-serif;
+  color: #E2E0C9;
+  margin: 2em 0;
+}
+
+.region-footer p, .region-footer li a, .region-footer li a.is-active {
+  color: #fff;
+  font-family: "work_sanslight", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.region-footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#copyright-outer-wrapper {
+  background-color: #003530;
+  padding: 1em 0;
+}
+
+#block-copyright p, #block-copyright li a {
+  font-family: "work_sanshairline", sans-serif;
+  font-size: 14.5px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#block-copyright ul {
+  margin: 0;
+  padding: 0;
+}
+
+#block-copyright li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#copyright-left {
+  width: 50%;
+  float: left;
+}
+
+#copyright-right {
+  width: 50%;
+  float: right;
+}
+
+.nb_fixed-bg {
+  min-height: 85vh;
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+#nb_slideshow_bg {
+  min-height: 85vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (min-width: 768px) {
+  .nb_fixed-bg, #nb_slideshow_bg {
+    height: 85vh;
+    background-attachment: fixed;
+  }
+}
+.path-fronpage #nb_fixed-bg1 {
+  display: none;
+}
+
+.nb_fixed-inner {
+  /* HOME PAGE LOGO repositioned for slider */
+  position: relative;
+  top: -85vh;
+}
+
+.responsive-menu-toggle {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+  background: #fff;
+  width: 40px;
+  height: 5px;
+  left: 5px;
+  border-radius: 6px;
+  margin: 0px 0;
+}
+
+.responsive-menu-toggle-icon span.icon {
+  top: 32px;
+}
+
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+  background: #fff;
+}
+
+.responsive-menu-toggle-icon span.label {
+  display: none;
+}
+
+.path-fronpage .responsive-menu-toggle-icon span.label {
+  display: block;
+  position: absolute;
+  font-size: 17px;
+  text-transform: uppercase;
+  top: 50px;
+  left: 0;
+  color: #fff;
+}
+
+/*# sourceMappingURL=krtk0.css.map */

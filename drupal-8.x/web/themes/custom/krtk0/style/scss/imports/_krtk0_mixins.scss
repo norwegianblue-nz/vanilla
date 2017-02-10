@@ -1,0 +1,109 @@
+
+
+@mixin krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out) {
+  transition: $type $speed $transition;
+   -moz-transition: $type $speed $transition;
+   -webkit-transition: $type $speed $transition;
+}
+
+@mixin krtk0Corners($rad: 5px) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin krtk0Shadow() {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+}
+
+// Baby Roo's Sandpit (for practicing small jumps)
+@mixin parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '960'){
+// To use: $thiscols = column span $nocols = total cols (usually 12) Add inside media queries for breakpoints
+    $wratio : $nocols / $thiscols;
+    $gridw : 960px;
+    $gutw : 20px;
+    @if $grid == '960' {
+        $gridw : 960px;
+        $gutw : 20px;
+    }
+    @if $grid == '1200' {
+        $gridw : 1200px;
+        $gutw : 20px;
+    }
+    @if $grid == '100' {
+        $gridw : 100%;
+        $gutw : 2%;
+    } 
+    $colw : ($gridw / $nocols) - $gutw;
+    $thisw : (($colw + $gutw) * $thiscols) - $gutw;
+    
+    width : $thisw !important;
+    margin-right : $gutw / 2;
+    margin-left : $gutw / 2;
+    &:first-of-type {margin-left : 0;}
+    &:last-of-type {margin-right : 0;}
+}
+
+// End of Roo's Sandbox'
+
+//Tim's Sandbox ( messier and ulitimately another form of scribble )
+@mixin krtk0BlockTitle($color) {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: "exo_2light_condensed", sans-serif;
+    color:$color;
+}
+@mixin krtk0PanelTitle($color) {
+    font-size: 1.5em;
+    font-family: "exo_2light_condensed", sans-serif;
+    color:$color;
+}
+@mixin krtk0AreaTitle($color) {
+    font-size: 1.9em;
+    font-family: "exo_2light_condensed", sans-serif;
+    font-weight: normal;
+    color:$color;
+    margin:1em 1em 0.1em 1em;
+    padding-top:0.5em;
+}
+@mixin krtk0TitleBottomBorder ($backgroundPic, $backgroundColor){
+	min-height: 50px;
+	background-color:$backgroundColor;
+	background-image: $backgroundPic;
+	background-repeat: repeat-x;
+	background-position: top;
+}
+@mixin krtk0HeadingH2($color) {
+    font-size: 1.9em;
+    font-family: "exoregular", sans-serif;
+    font-weight: normal;
+    color:$color;
+    padding-top:0.5em;
+}
+@mixin krtk0HeadingH3($color) {
+    font-size: 1.5em;
+    font-family: "exoregular", sans-serif;
+    font-weight: normal;
+    color:$color;
+    padding-top:0.5em;
+}
+
+@mixin krtk0Columns($number, $min-width, $gap, $rule) {
+    -webkit-column-count: $number; /* Chrome, Safari, Opera */
+    -moz-column-count: $number; /* Firefox */
+    column-count: $number;
+
+    -webkit-column-width: $min-width; /* Chrome, Safari, Opera */
+    -moz-column-width: $min-width; /* Firefox */
+    column-width: $min-width;
+
+    -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+    -moz-column-gap: $gap; /* Firefox */
+    column-gap: $gap;
+
+    -webkit-column-rule: $rule; /* Chrome, Safari, Opera */
+    -moz-column-rule: $rule; /* Firefox */
+    column-rule: $rule;
+}

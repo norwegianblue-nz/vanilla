@@ -1,0 +1,50 @@
+@import "krtk0_mixins";
+  
+// Basic Color Variables 
+$primaryColor1: #3A3A3A;
+$primaryColor2: #5A5A5A;
+$primaryColor3: #CCCCCC;
+$primaryColor4: #1A1A1A;
+$primaryColor5: #9A9A9A;
+$mainMenuBgColor: #9A9A9A;
+$mainMenuFontColor: #1A1A1A;
+$mainMenuBorderColor: #1A1A1A;
+$buttonBgColor: #9A9A9A;
+$buttonFontColor: #1A1A1A;
+$buttonBorderColor: #1A1A1A;
+
+// KRTK Colours
+$krtk0_Teal: #00737B; /* rgb(0,115,123)*/
+$krtk0_TransTeal: rgba(0,115,123,0.8);
+$krtk0_DarkTeal: #004146; /* rgb(0,65,70)*/
+$krtk0_Blue: #00A3B6; /* rgb(0,163,182)*/
+$krtk0_Red: #E8474D; /* rgb(232,71,77)*/
+$krtk0_Olive: #9A9A23; /* rgb(154,154,35)*/
+$krtk0_DarkOlive: #727318; /* rgb(114,115,24)*/
+$krtk0_Orange: #DB4F14; /* rgb(219,79,20)*/
+$krtk0_DarkOrange: #872F07; /* rgb(135,47,7)*/
+$krtk0_Buff: #E2E0C9; /* rgb(226,224,201)*/
+$krtk0_DarkGrey: #444; /* rgb(??)*/
+$krtk0_lightGrey: #ccc; /* rgb(??)*/
+
+// Main zone colours
+$krtk0_about-col    :$krtk0_Red;
+$krtk0_kids-col     :$krtk0_Olive;
+$krtk0_update-col   :$krtk0_DarkTeal;
+$krtk0_learning-col :$krtk0_Orange;
+$krtk0_locals-col   :$krtk0_Olive;
+
+
+// Basic Font Variables
+$defaultHeaderFont: Georgia, serif;
+$defaultBodyFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// KRTK Fonts
+$krtk0_WorkSans-Light: "work_sanslight", sans-serif;
+$krtk0_WorkSans-Hairline: "work_sanshairline", sans-serif;
+$ktrk0_Exo2-LightCondensed:"exo_2light_condensed", sans-serif;
+$ktrk0_Exo2-RegularCondensed:"exo_2regular_condensed", sans-serif;
+$ktrk0_Exo2-RegularItalic:"exoitalic", sans-serif;
+$ktrk0_Exo2-Regular:"exoregular", sans-serif;
+$ktrk0_Exo2-MediumCondensed:"exo_2medium_condensed", sans-serif;
+$ktrk0_Exo2-LightExpanded:"exo_2light_expanded", sans-serif;

@@ -1,0 +1,887 @@
+@import "krtk0_mixins", "krtk0-style-vars", "krtk0-default-style-vars", "krtk0gs";
+////////////////////////////////////////////////////////////////////////////////
+//
+// SANDBOX 
+//
+////////////////////////////////////////////////////////////////////////////////
+      
+// RESET for _html-elements.scss - this is ours (I think!) and maybe just needs removing?
+p a {border:none !important;color:$krtk0_Teal;}
+
+// Home Logo ///////////////////////////////////////////////////////////////////
+#block-logohomepage {z-index: -200;	position: relative;} /* To fix tool bar unclickable on logged in */
+#page div#logo-home {width: 250px;
+	position: absolute;
+	margin:0 auto;
+	@include krtk0Transition;
+	left: 50%;
+	margin-left: -90px;
+	top: 5vh;
+}
+#page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;height:50px;}
+
+// Pages Logo //////////////////////////////////////////////////////////////////
+#block-logogeneralpages {
+    float: left;
+    margin-top: 5px;}
+#page #block-logogeneralpages img {
+    width: 100%;@include krtk0Transition;}
+#page.scrolled #block-logogeneralpages img {
+    width: 60%;@include krtk0Transition;margin-top:-10px;}
+
+// Menu bar ////////////////////////////////////////////////////////////////////
+
+#menu-outer-wrapper {background-color: $krtk0_TransTeal;position: fixed; z-index:20; width: 100%; padding-top:10px;}
+
+div#block-statictopmenu {text-align:center;}
+#block-statictopmenu ul {display:inline-block;list-style:none;margin:0.5em;padding:0;}
+#block-statictopmenu li {
+	display:inline-block;
+	list-style:none;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-transform:uppercase;
+	font-size:25px;
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/menu-marker.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	height:45px;
+	padding:0px 20px;
+}
+#block-statictopmenu li a {color:#fff;padding: 2px 2px 20px;}
+#block-statictopmenu div.contextual {display:none !important;} // hidden for LOGGED IN STATE - CONTEXTURAL BLOCKS
+
+// # Search Bar # //
+// icons
+#block-krtktoolbar {
+	float: right;
+	background-color: $krtk0_DarkTeal;
+	width: 220px;
+	padding:2px 5px 2px 115px;
+	clear: right;
+}
+#block-krtktoolbar a {line-height:0;} //Reduce default height of a tag to zero
+.tool-bar-icon {
+	display: inline-block;
+	margin: 3px 1px;
+	background-color: transparent;
+	border-radius: 12px;
+	padding: 2px;
+}
+.tool-bar-icon.clicked {background-color:#fff;}
+.tool-bar-icon-info {display:none;} // INFO REMOVED TILL LATER
+
+// expandend toolbar divs
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu  {
+	@include parrotCols(6, 12, normal, '1200');
+	margin-right:0;
+	float: right;
+	clear: right;
+	background-color: $krtk0_DarkTeal;
+	padding: 15px;
+	position:absolute;
+	top:100%;
+	right:0;
+	z-index:30;
+	display:none;
+}
+
+div#block-krtk0-search.expand, div#block-userlogin.expand {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
+body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
+
+#block-krtk0-search #edit-keys, #block-userlogin input.form-text { // text input box
+	width: 80%;
+	padding: 13px;
+	font-size: 18px;
+	color: #888;
+	border:none;
+}
+#block-userlogin label.js-form-required {
+	width: 100px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-size:14px;
+}
+
+//  Login and submit btns, and button class
+input.button,
+#block-useraccountmenu ul.menu li,
+.button
+{
+	padding: 16px;
+	background-color: $krtk0_Teal;
+	border: none;
+	color: #fff;
+	margin: 0 !important;
+	text-transform: uppercase;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-size:14px;
+}
+#block-krtk0-search input.button, #block-userlogin input.button {float: right;}
+#block-useraccountmenu ul.menu li a {color: #fff;}
+
+#block-userlogin div.item-list ul {margin:0;}
+#block-userlogin div.item-list li {margin: 0 0 0 76px;
+	margin: 0 0 0 76px;
+	width: 160px;
+	border: 1px $krtk0_Teal solid;
+	display:block;
+}
+#block-userlogin div.item-list li a {color: #fff;display:block;padding:12px 6px 16px 10px;}
+
+//	Button/search bar/login responsive styles
+@media all and (max-width: 559px) {
+	#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {width:100% !important}
+	#block-userlogin input.form-text {width:65%;}
+}
+
+
+// Header Area /////////////////////////////////////////////////////////////////
+#krtk0-letterbox {
+	height: 30vh; min-height:19em;
+	background: transparent;
+}
+
+// Header
+#header-outer-wrapper {background-color: $krtk0_TransTeal;}
+
+#block-krtk0-branding {display: none;}
+#block-logostrapfrontpage h2 {text-align:center;color:#fff;font-family:$ktrk0_Exo2-LightCondensed;font-size:21px;margin:2em 0;}
+
+// Zone buttons !! NOW GENERALLY USED FOR ZONE TITLES !! /////////////////////////////////////////////////////////////
+
+// !! NB #btns wrapper and content needs targeting for each zone !! ///
+
+/*body.path-frontpage*/ #btns-outer-wrapper { /* re-instate frontpage once zones defined */
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-button-bar-bg.svg');
+	background-repeat:repeat-x;
+	background-position:top center;
+	padding-top:2em;
+}
+
+body.node--type-meet-the-locals #btns-outer-wrapper, /* DELETE after interim finished */
+body.node--type-meetlocals #btns-outer-wrapper { /* MAY CHANGE once zones targeting finalised */
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/locals-zone-bar-bg-top.svg');
+	background-repeat:repeat-x;
+	background-position:top center;
+	padding-top:2em;
+}
+div#block-krtk0-mainbuttons {
+    width: 99.9%;
+    text-align: center;
+    margin: 5px auto;
+}
+
+/// Buttons
+div.zone-button {width:100px;display:inline-block;vertical-align:top;text-align:center;}
+div.zone-button p {line-height:1em;margin:0;}
+div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px;}
+
+div#block-mainbuttons-2 {margin: 7px auto;}
+#block-mainbuttons-2 {width: 60%; margin: 10px auto 0; text-align: center;}
+#block-mainbuttons-2 div.zone-button img {width:60px;@include krtk0Transition;} /* narrower icon for general pages */
+#page.scrolled #block-mainbuttons-2 div.zone-button img {width:50px;@include krtk0Transition;} /* smaller icon on scroll */
+#page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
+
+//
+// Page titles - may change once zone targeting defined /!/!/!/!/!/!
+//
+h2.zone-title, h2.zone-title a,
+{	color: #fff;
+	font-size: 30px;
+	font-family: $ktrk0_Exo2-RegularCondensed;
+	text-transform: lowercase;
+	margin: 0.3em 0;
+	font-weight:normal;
+}
+h2.zone-title img /*#block-placeholdertitle img, #block-zonetitlemeetthelocals img*/ {vertical-align:middle;margin-right:15px;}
+
+
+// Team pager on front page //////////////////////////////////////////////////////////////////
+body.path-frontpage #teaser-outer-wrapper {
+	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-color: $krtk0_Teal;
+	border-bottom:1.5em solid #fff;
+}
+// team pic temp DELETE WHEN PIC SIZE SET IN VIEW:
+//.image-style-thumbnail {width:140px;margin-right:16px;}
+
+#block-meettheteamtitle h2 {@include krtk0BlockTitle($krtk0_Buff);}
+// .view-front-page-team {margin:4em 0;}
+
+@media all and (max-width: 959px) {
+	#block-views-block-krtk-leadership-team-members  {@include parrotCols(4, 4, normal, '100');}
+	#block-meettheteamintro				{@include parrotCols(4, 4, normal, '100');}
+#block-views-block-front-page-team .view-front-page-team div.views-row {width:27.5%;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+	#block-views-block-krtk-leadership-team-members  {@include parrotCols(6, 12, normal, '960');}
+	#block-meettheteamintro				{@include parrotCols(6, 12, normal, '960');}
+	#block-views-block-krtk-leadership-team-members  {margin-left:0 !important;}
+}
+@media all and (min-width: 1280px) {
+	#block-views-block-krtk-leadership-team-members  {@include parrotCols(6, 12, normal, '1200');}
+	#block-meettheteamintro 			{@include parrotCols(6, 12, normal, '1200');}
+	#block-views-block-krtk-leadership-team-members  {margin-left:0 !important;}
+}
+#block-views-block-krtk-leadership-team-members {float:left;}
+#block-meettheteamintro {float:right;}
+
+#block-views-block-krtk-leadership-team-members div.views-row {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 137px;
+	margin-right:20px;
+}
+#block-views-block-krtk-leadership-team-members div.views-row:last-of-type {margin-right:0;}
+
+#block-meettheteamintro p {font-family:$krtk0_WorkSans-Hairline;font-size:30px;color:#fff;margin-top:-0.2em;}
+
+#block-views-block-krtk-leadership-team-members h2 {
+	font-size: 20px !important;
+	font-family: "exo_2medium_condensed", sans-serif;
+	margin: 0;
+	line-height: 1.2em;
+}
+#block-views-block-krtk-leadership-team-members h2 a {
+	color: #fff;
+}
+#block-views-block-krtk-leadership-team-members .pager__items {text-align:left;}
+#block-views-block-krtk-leadership-team-members nav.pager ul {margin:50px 0;padding:0;}
+#block-views-block-krtk-leadership-team-members nav.pager li a {
+	display: inline-block;
+	border: 1px solid #fff;
+	padding: 5px 12px;
+	margin: 7px 0px;
+	color: #fff;
+	background-color: $krtk0_Red;
+}
+#block-views-block-krtk-leadership-team-members nav.pager li {padding-left:0;}
+#block-views-block-krtk-leadership-team-members nav.pager li.pager__item.is-active a {color:$krtk0_DarkGrey;}
+
+
+// Content stripes ///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//	Home page stripes ///////////
+
+.path-frontpage #preface-outer-wrapper { /* kid zone - background and title background for home page only */
+	background-color: #fff;
+	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-kidszone-bg-texture.jpg');
+	border-top: 200px solid;
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg') 100;
+}
+@media all and (max-width: 959px) { // minimise border squash on smaller screens
+.path-frontpage #preface-outer-wrapper {
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg') 200;
+}
+}
+
+.path-frontpage #content-outer-wrapper { /* about zone - background and title background for home page only */
+	background-color: #fff;
+	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-about-bg-texture.jpg');
+	border-top: 200px solid;
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 100;
+}
+@media all and (max-width: 959px) { // minimise border squash on smaller screens
+.path-frontpage #content-outer-wrapper {
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 200;
+}
+}
+
+#block-zonetitleabout-front h2 a,
+#block-zonetitlehomeinterimmeetthelocals h2 a{
+	width: 100%;
+	display: block;
+	padding: 10px 10px 4px;
+}
+
+#block-zonetitleabout-front,
+#block-zonetitlehomeinterimmeetthelocals h2 { // ADD EXTRA ZONE BLOCK TARGETS HERE !?!?!?!?!?
+	margin-top: -88px !important;
+	margin: 0 0 4em;
+	background-color: $krtk0_Teal;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+#block-zonetitlehomeinterimmeetthelocals h2 {background-color: $krtk0_locals-col;}
+
+// Bottom title border for nodes
+body.node--type-article #title-bar-wrapper, //About articles
+body.path-articles #title-bar-wrapper, //About articles Summary page
+body.node--type-page #title-bar-wrapper,	//basic pages
+body.path-meet-locals #title-bar-wrapper, //INTERIM locals page
+{@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"),#fff);
+}
+body.node--type-meet-the-locals #title-bar-wrapper, // INTERIM Meet the locals pages
+body.node--type-meetlocals #title-bar-wrapper // Meet the locals pages
+{@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/bottom-locals-title-bar-bg.svg"),#fff);
+}
+
+
+//  General content styles ////////////////
+#content-outer-wrapper {background-color: #fff;}
+#main-layout {padding-bottom:5em;}
+.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 1px); }
+
+//  Display suite columns for 9/12 and 3/12 ////////
+@media all and (max-width: 959px) {
+div.node.ds-2col > .group-left {@include parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '100');}
+div.node.ds-2col > .group-right {@include parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '100');}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+div.node.ds-2col > .group-left {@include parrotCols($thiscols:9, $nocols:12, $margin: 'normal', $grid: '960');}
+div.node.ds-2col > .group-right {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');}
+}
+
+@media all and (min-width: 1280px) {
+div.node.ds-2col > .group-left {@include parrotCols($thiscols:9, $nocols:12, $margin: 'normal', $grid: '1200');}
+div.node.ds-2col > .group-right {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
+}
+
+
+
+//	Photos ////////
+#block-krtk0-content figure {margin:0.6em 20px 1em 0;}
+#block-krtk0-content .caption > figcaption {font-size: 1.3em;
+padding: 5px 0 1em 0;
+color: $krtk0_DarkTeal;}
+
+
+
+//	Typography - content stripe //////////
+#block-krtk0-content h2 {@include krtk0HeadingH2($krtk0_Orange)}
+#block-krtk0-content h3 {@include krtk0HeadingH3($krtk0_Teal)}
+
+#block-krtk0-content > li {font-size: 1.5em;   padding: 0 0 20px 60px; }
+#block-krtk0-content > ol,
+#block-krtk0-content > ul{
+	margin: 0 0 20px;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+#block-krtk0-content > ol li {counter-increment: step-counter;}
+#block-krtk0-content > ol li::before,
+#block-krtk0-content > ul li::before{
+	margin-right: 5px;
+	font-size: 80%;
+	background-color: $krtk0_Blue;
+	color: #fff;
+	font-weight: normal;
+	padding: 1px 3px 1px 5px; 
+	border-radius: 2px;
+	position: absolute;
+	left:0;
+	min-width: 34px;
+	text-align:center;
+}
+#block-krtk0-content > ol li::before {content: counter(step-counter);}
+#block-krtk0-content > ul li::before{content:">"}
+
+
+//	Latst news - right col //////
+.field--name-dynamic-block-fieldnode-latest-news.field--type-ds.field--label-above .field__label 
+{@include krtk0BlockTitle($krtk0_Orange);font-size:2em;}
+
+// Responsive embebed iFrames
+.responsive-iframe{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.responsive-iframe iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    border:none;
+}
+
+//	Articles /////////////////////
+
+//  Tags  //
+body.node--type-article .field--taxonomy-terms {
+	background-color: $krtk0_Orange;
+}
+
+body.node--type-article .field--taxonomy-terms div.field__label {
+	@include krtk0AreaTitle($krtk0_Buff)
+}
+body.node--type-article .field--taxonomy-terms div.field__label::after {
+	content:"Check out these related article topics:";
+	display:block;
+	font-size:18px;
+	font-family:$krtk0_WorkSans-Light;
+}
+
+body.node--type-article .field-item--taxonomy-term.field__item {
+	display: inline;
+	margin-right: 15.5px;
+}
+body.node--type-article .field-item--taxonomy-term a {
+	background-color: $krtk0_DarkOrange;
+	color:$krtk0_Buff;
+	font-size:18px;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	padding: 10px 10px;
+	margin: 10px 0;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+@media all and (max-width: 599px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(12, 12, normal, '100');}
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(6, 12, normal, '100');}
+    body.node--type-article .field-item--taxonomy-term.field__item a:nth-of-type(even) {margin-right:0;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(4, 12, normal, '960');}
+}
+@media all and (min-width: 1280px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(3, 12, normal, '1200');}
+}
+
+//  Comments  // *#*#*#*#* MOVE TO COMMENTS.CSS *#*#*#*#*#*#*#*
+//  This css not as designed...parked for now: 
+body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
+	background-color:$krtk0_Buff;padding:0 20px 20px 20px;
+}
+body.node--type-article .field--label-above.comment-wrapper h2.title {
+	@include krtk0AreaTitle($krtk0_DarkOrange);
+}
+body.node--type-article .comment__content {
+	margin-left:2%; width:98%; background-color:#fff;
+}
+body.node--type-article .comment-meta {margin-left:23px;}
+
+//  /comments
+
+
+//	Articles summary page panels
+.view-article-summary > div.view-content,
+.view-taxonomy-term > div.view-content,
+{font-size:0;} // Remove white space between inline-block elements
+.view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 14px; // Re-instates font-size after inline-block above
+}
+
+@media all and (max-width: 599px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {width:135px; margin-right:20px;}
+}
+@media all and (min-width:600px) and (max-width: 959px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:4, $nocols:12, $margin: 'normal', $grid: '100');
+	}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-left:0;}
+	.view-article-summary div.views-row img, .view-taxonomy-term div.views-row img {width:100% !important;}
+}
+@media all and (min-width:960px) and (max-width: 1279px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row  {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');
+	}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+}
+@media all and (min-width:1280px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');
+	}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+}
+
+
+.view-article-summary div.views-row .field--name-node-title,
+.view-taxonomy-term div.views-row .node--type-article h2 { // Title
+	font-size: 1.7em;
+	line-height: 1.2em;
+	font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;
+	margin:0;
+}
+.view-article-summary div.views-row .field--name-node-title h2 a,
+.view-taxonomy-term div.views-row .node--type-article h2 a {color:$krtk0_Teal;}
+
+.view-article-summary div.views-row .field--name-node-post-date, // Date
+// .view-taxonomy-term div.views-row .node--submitted // Use this one for tag summary later?
+{
+	font-size: 1.3em;
+	line-height: 1.25em;
+	color: $krtk0_Blue;
+	font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;
+	margin:0 0 0.1em;
+}
+
+.view-article-summary div.views-row a.readmore-btn,
+.view-taxonomy-term div.views-row li.node-readmore { // Buttons
+	background-color:$krtk0_Teal;
+	display:block;
+	color:$krtk0_Teal;
+	background-image:url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	height: 3em;
+	margin: -6px 0 0 0;
+}
+.view-taxonomy-term div.views-row li.node-readmore a {color:#fff;padding:18px;font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;font-size: 1.3em;}
+
+
+
+//	Meet the locals page type /////////////////// NOTE - interim style below
+
+
+div.node--type-meetlocals .group-left .field--name-node-title h2, // Main title
+div.node--type-meetlocals .field--name-field-maori-name // Maori title
+{
+	font-size: 3em;
+	line-height: 1em;
+	color: $krtk0_locals-col;
+	text-transform: uppercase;
+	font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;
+	margin:0;
+}
+div.node--type-meetlocals .field--name-field-maori-name div {display:inline;}
+
+div.node--type-meetlocals .field--name-field-latinname { // Latin name
+    font-size: 20px;     font-style: italic;
+    color: #555;     margin-bottom: 1em;
+}
+
+//  Definition panels //
+
+// 	Panels
+.paragraph--type-locals3panel > div, .paragraph--type-locals2panel > div {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.paragraph--type-locals3panel,
+.paragraph--type-locals2panel {display:flex;}
+
+.paragraph--type-locals3panel .field__label,
+.paragraph--type-locals2panel .field__label {
+	font-size:18px;
+	font-family:$ktrk0_Exo2-RegularItalic;
+	font-weight:normal;
+	color:$krtk0_DarkOrange;
+}
+.paragraph--type-locals3panel .field__item,
+.paragraph--type-locals3panel h2,
+.paragraph--type-locals2panel h2 {
+	font-size:26px;
+	font-family:$ktrk0_Exo2-Regular;
+	color:#fff;
+	margin:0 0 0.4em;
+}
+.paragraph--type-locals3panel .field__item a, .paragraph--type-locals2panel h2 a {color:#fff;}
+
+.paragraph--type-locals3panel > div {padding: 70px 10px 10px 10px; text-align:center;}
+.paragraph--type-locals2panel > div {padding: 10px 10px 10px 80px; text-align:left;}
+
+.paragraph--type-locals3panel div.group-left {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/nz-icon.png') no-repeat center 10px $krtk0_locals-col;}
+.paragraph--type-locals3panel div.group-middle {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/status-icon.png') no-repeat center 10px $krtk0_locals-col;}
+.paragraph--type-locals3panel div.group-right {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/strategy-icon.png') no-repeat center 10px $krtk0_locals-col;}
+
+.paragraph--type-locals2panel div.group-left {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/trophic-icon.png') no-repeat 15px 50% $krtk0_locals-col;}
+.paragraph--type-locals2panel div.group-right {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/habitat-icon.png') no-repeat 15px 50% $krtk0_locals-col;}
+
+
+@media all and (max-width: 959px) {
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '100');}
+	.paragraph--type-locals2panel > div {width:100%;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');}	
+	.paragraph--type-locals2panel > div {width:47.1%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+@media all and (min-width: 1280px) {
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
+	.paragraph--type-locals2panel > div {width:47.7%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+
+//  Main body //
+
+.node--type-meetlocals div#block-krtk0-content h2 {
+	font-family:$ktrk0_Exo2-LightExpanded;
+	font-size: 31px;
+	line-height: 1.5em;
+	margin: 0;
+	color:$krtk0_Orange;
+}
+.node--type-meetlocals div.field--name-body h3 {
+	color:$krtk0_DarkTeal;
+	font-size:22px;          
+	line-height: 1.5em;
+	margin: 0;
+}
+
+// Right col //
+.field--name-field-more-info.field--type-entity-reference-revisions.field--label-above .field__label {
+	@include krtk0PanelTitle(#fff);
+	display:block;
+	padding:10px 5px 10px 80px;
+	background:url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/link-icon.png") no-repeat 8px 50% $krtk0_locals-col;
+}
+.field--name-field-url.field--type-link.field--label-hidden.field__item a {
+	display: block;
+	color:#fff;
+	margin: 10px 0 0;
+	padding: 15px 58px 15px 10px;
+	background: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png) no-repeat $krtk0_DarkOlive right 50%;
+	font-size:1.2em;
+}
+.field--name-field-link-descriptions.field--type-string.field--label-hidden.field__item {
+	padding:10px;
+	border:1px solid #ccc;
+	border-top: 0px;
+	font-size:1.15em;
+}
+
+//	**INTERIM** meet the locals /// REMOVE ONCE COMPLETE ///////////////////////
+
+.node--type-meet-the-locals.node--view-mode-teaser h2 {@include krtk0BlockTitle($krtk0_locals-col);}
+.node--type-meet-the-locals.node--view-mode-teaser h2 a {color:$krtk0_locals-col;}
+.node--type-meet-the-locals.node--view-mode-teaser .node__links {
+    display: block;
+    background-color: $krtk0_locals-col;
+    padding: 10px;
+    width: 150px;
+    font-size: 20px;
+    margin: 8px 0;
+}
+.node--type-meet-the-locals.node--view-mode-teaser .node__links a {color:#fff;}
+
+
+// Social stripe ////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+#social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:4em;}
+#socialBlock-icons, #socialBlock-facebook {
+    width: 49.7%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#socialBlock-title {@include krtk0BlockTitle(#fff);} //TARGET MAY CHANGE
+
+//  Front page Partners stripe (see below for pages' partner stripe) //////////////////////////////////////////////////////////////
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p {
+	font-family:$krtk0_WorkSans-Hairline;
+	font-size:51px;
+	color:$krtk0_DarkGrey;
+	text-align:center;
+	text-transform:initial;
+	max-width: 800px;
+    margin: 0 auto;
+}
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::before {content:open-quote;}
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::after {content:close-quote;}
+
+
+//  Extras (partners strip on pages) //////////////////////////////////////////////////////////////////////
+#extras-outer-wrapper {
+	background-color: $krtk0_Blue;
+	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border.svg");
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	padding-bottom:2em;
+	border-bottom:solid 10px #fff;
+	/* background-size: 350%; - Change for breakpoints */
+	
+}
+body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$krtk0_Buff;	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border-front.svg");
+}
+#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;	
+}
+#block-views-block-front-page-display-items-partner-logos h2 a, //Front
+#block-views-block-front-page-display-items-block-1 h2 a {	//Pages
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	width: 250px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	display: block;
+}
+
+
+.view-front-page-display-items .view-content { // check target
+  background-color: #fff;
+  padding: 10px;
+  text-align:center;
+}
+.view-front-page-display-items .views-row { // check target
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.view-display-id-partner_logos .views-row:last-of-type::after // used on pages? - Check
+	{content: ""; display: table; clear: both;}
+
+
+// Footer //////////////////////////////////////////////////////////////////////
+
+#footer-header-outer-wrapper {
+    background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/footer-title-bg.png');
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color:#fff;
+    border-top :5em solid #fff;
+}
+// #block-charityfooternumber {@include column(8, 12, zero);float:left;padding-top: 40px;}
+// #block-footertitlekrtklogo {@include column(4, 12, zero);float:right;padding-top:28px;}
+@media all and (max-width: 959px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '100');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '100');float:right;padding-top:20px;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '960');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '960');float:right;padding-top:20px;}
+}
+@media all and (min-width: 1280px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '1200');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '1200');float:right;padding-top:20px;}
+}
+#block-charityfooternumber h2 {
+    font-size: 20px;
+    font-family: $ktrk0_Exo2-MediumCondensed;
+    color: $krtk0_DarkTeal;
+}
+#block-charityfooternumber p {
+    font-size: 15px;
+    color: #575757;
+}
+
+#footer-outer-wrapper {background-color:$krtk0_DarkTeal;padding-bottom:3em;}
+div.region-footer > div, div.region-footer > nav {
+//	width:24.6%;
+//	@include parrotCols(3, 12, normal, '100');
+	display:inline-block;
+	vertical-align:top;
+}
+
+@media all and (max-width: 959px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(2, 4, normal, '100');float:left;padding-top: 40px;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(3, 12, normal, '960');float:left;padding-top: 40px;}
+}
+@media all and (min-width: 1280px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(3, 12, normal, '1200');float:left;padding-top: 40px;}
+}
+
+
+div.region-footer > div#block-footersocialicons,
+div.region-footer > div#block-footercontactsblock {width:100%;clear:both;}
+div.region-footer > div#block-footersocialicons {margin:1.5em 0 1em 0;}
+.region-footer h2 {
+	font-size: 1.5em;
+    font-family: $ktrk0_Exo2-LightCondensed;
+    color:$krtk0_Buff;
+    margin:2em 0;
+}
+
+.region-footer p, .region-footer li a, .region-footer li a.is-active {
+	color:#fff;
+	font-family:$krtk0_WorkSans-Light;
+	font-size:16px;
+	line-height:1.5em;
+}
+.region-footer ul {list-style-type:none;padding:0;margin:0;}
+
+// Copyright ///////////////////////////////////////////////////////////////////
+
+#copyright-outer-wrapper {background-color:#003530;padding:1em 0;}
+#block-copyright p, #block-copyright li a {font-family:$krtk0_WorkSans-Hairline;font-size:14.5px;color:#fff;letter-spacing:1px;}
+#block-copyright ul {margin:0;padding:0;}
+#block-copyright li {display:inline-block;list-style:none;margin:0;padding:0;}
+#copyright-left {width:50%;float:left;}
+#copyright-right {width:50%;float:right;}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// End of SANDBOX
+//
+////////////////////////////////////////////////////////////////////////////////
+.nb_fixed-bg {
+    min-height: 85vh;
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#333;
+    position: fixed;
+    top :0;
+    width: 100vw;
+    z-index: -1;
+}
+#nb_slideshow_bg {min-height: 85vh;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+@media all and (min-width: 0px) {.nb_fixed-bg{}}
+@media all and (min-width: 480px) and (max-width: 767px) {.nb_fixed-bg{}}       
+@media all and (min-width: 768px) /*and (max-width: 1023px)*/ {
+	.nb_fixed-bg, #nb_slideshow_bg{
+		height:85vh;
+		background-attachment: fixed;
+	}
+}
+@media all and (min-width: 1024px) and (max-width: 1219px) {.nb_fixed-bg{}}
+@media all and (min-width: 1220px) {.nb_fixed-bg{}}
+
+.path-fronpage #nb_fixed-bg1 {
+    display: none;
+}
+
+.nb_fixed-inner { /* HOME PAGE LOGO repositioned for slider */
+    position: relative;
+    top: -85vh;
+}
+
+// ## hamburger
+.responsive-menu-toggle {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+	background: #fff;
+	width: 40px;
+	height: 5px;
+	left: 5px;
+	border-radius: 6px;
+	margin: 0px 0;
+}
+.responsive-menu-toggle-icon span.icon {
+	top: 32px;
+}
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+	background: #fff;
+}
+.responsive-menu-toggle-icon span.label {display:none;} // Hide "menu" on hamburger from all pages other than home
+.path-fronpage .responsive-menu-toggle-icon span.label {
+	display: block;
+	position: absolute;
+	font-size: 17px;
+	text-transform: uppercase;
+	top: 50px;
+	left: 0;
+	color: #fff;
+}
