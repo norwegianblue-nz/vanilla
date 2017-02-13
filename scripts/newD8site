@@ -34,6 +34,7 @@ ln -s drupal-8.x/web htdocs
 cp -a /var/www/vhosts/vanilla/drupal-8.x/web/sites/newsite drupal-8.x/web/sites/$newsite
 cp drupal-8.x/web/sites/example.sites.php drupal-8.x/web/sites/sites.php
 sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.php
+sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.local.php
 cp $vanilla/scaffold/aliases.drush .
 newsitealias=$(kdialog --title "Drush Alias" --inputbox "Input the Drush Alias for the new site name (eg $examplealias)" "$examplealias")
 sed -i -- 's/newsitealias/'$newsitealias'/g' aliases.drush

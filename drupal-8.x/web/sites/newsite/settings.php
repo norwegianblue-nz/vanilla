@@ -33,7 +33,7 @@ $settings['update_free_access'] = FALSE;
 /**
  * Public file path:
  */
-# $settings['file_public_path'] = 'sites/default/files';
+$settings['file_public_path'] = 'sites/newsite/files';
 
 /**
  * Private file path:
@@ -50,11 +50,6 @@ $config_directories['sync'] = 'config/sync';
 
 /**
  * Load local development override configuration, if available.
- *
- * Use settings.local.php to override variables on secondary (staging,
- * development, etc) installations of this site. Typically used to disable
- * caching, JavaScript/CSS compression, re-routing of outgoing emails, and
- * other things that should not happen on development and testing sites.
  *
  * Keep this code block at the end of this file to take full effect.
  */
