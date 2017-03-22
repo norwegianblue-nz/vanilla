@@ -1,4 +1,4 @@
-@import "parrotstripes_mixins";
+@import "dsp1_mixins";
   
 // Basic Color Variables 
 $primaryColor1: #0062A0;
@@ -14,16 +14,16 @@ $buttonFontColor: #1A1A1A;
 $buttonBorderColor: #1A1A1A;
 
 // pealing Colours
-$parrotstripes_Teal: #00737B; /* rgb(0,115,123)*/
-$parrotstripes_TransTeal: rgba(0,115,123,0.8);
-$parrotstripes_DarkTeal: #004146; /* rgb(0,65,70)*/
-$parrotstripes_Blue: #00A3B6; /* rgb(0,163,182)*/
-$parrotstripes_Red: #E8474D; /* rgb(232,71,77)*/
-$parrotstripes_Olive: #9A9A23; /* rgb(154,154,35)*/
-$parrotstripes_DarkOlive: #727318; /* rgb(114,115,24)*/
-$parrotstripes_Orange: #DB4F14; /* rgb(219,79,20)*/
-$parrotstripes_DarkOrange: #872F07; /* rgb(135,47,7)*/
-$parrotstripes_Buff: #E2E0C9; /* rgb(226,224,201)*/
+$dsp1_Teal: #00737B; /* rgb(0,115,123)*/
+$dsp1_TransTeal: rgba(0,115,123,0.8);
+$dsp1_DarkTeal: #004146; /* rgb(0,65,70)*/
+$dsp1_Blue: #00A3B6; /* rgb(0,163,182)*/
+$dsp1_Red: #E8474D; /* rgb(232,71,77)*/
+$dsp1_Olive: #9A9A23; /* rgb(154,154,35)*/
+$dsp1_DarkOlive: #727318; /* rgb(114,115,24)*/
+$dsp1_Orange: #DB4F14; /* rgb(219,79,20)*/
+$dsp1_DarkOrange: #872F07; /* rgb(135,47,7)*/
+$dsp1_Buff: #E2E0C9; /* rgb(226,224,201)*/
 
 // Basic Font Variables
 $defaultHeaderFont: comfortaaregular,Arial,sans-serif;
@@ -35,8 +35,8 @@ $desktopH2: 2.2em;
 $mobileH2: 1.8em;
 
 // pealing.com Fonts
-$parrotstripes_WorkSans-Light: "work_sanslight", sans-serif;
-$parrotstripes_WorkSans-Hairline: "work_sanshairline", sans-serif;
+$dsp1_WorkSans-Light: "work_sanslight", sans-serif;
+$dsp1_WorkSans-Hairline: "work_sanshairline", sans-serif;
 $ktrk0_Exo2-LightCondensed:"exo_2light_condensed", sans-serif;
 $ktrk0_Exo2-RegularCondensed:"exo_2regular_condensed", sans-serif;
 $ktrk0_Exo2-MediumCondensed:"exo_2medium_condensed", sans-serif;

@@ -1,6 +1,6 @@
 <?php
 
-use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
+use Drupal\dsp1\Theme\OmegaSettingsInfo;
 
 // Custom settings in Vertical Tabs container
 $form['subtheme-generator'] = array(

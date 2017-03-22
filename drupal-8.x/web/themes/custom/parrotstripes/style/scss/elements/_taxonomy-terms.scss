@@ -1,4 +1,4 @@
-@import "parrotstripes-style-vars", "parrotstripes-default-style-vars";
+@import "dsp1-style-vars", "dsp1-default-style-vars";
 
 // Default style for Taxonomy terms in Omega Five
 .field--taxonomy-terms {
@@ -31,8 +31,8 @@
     border: $taxonomy-term--border;
     color: $taxonomy-term--font-color;
     
-    @include parrotstripesTransition(all, 0.25s, ease-in-out);
-    @include parrotstripesCorners(2px);
+    @include dsp1Transition(all, 0.25s, ease-in-out);
+    @include dsp1Corners(2px);
     
     &:hover {
       background: $taxonomy-term--hover--background;

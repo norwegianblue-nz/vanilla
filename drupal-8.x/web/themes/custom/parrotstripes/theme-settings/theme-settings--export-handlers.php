@@ -1,10 +1,10 @@
 <?php
 
-use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
-use Drupal\parrotstripes\Export\OmegaExport;
+use Drupal\dsp1\Theme\OmegaSettingsInfo;
+use Drupal\dsp1\Export\OmegaExport;
 
-function parrotstripes_theme_generate_validate(&$form, &$form_state) {
-  //drupal_set_message(t('Running <strong>parrotstripes_theme_generate_validate()</strong>'));
+function dsp1_theme_generate_validate(&$form, &$form_state) {
+  //drupal_set_message(t('Running <strong>dsp1_theme_generate_validate()</strong>'));
   $build_info = $form_state->getBuildInfo();
   $themeHandler = \Drupal::service('theme_handler');
   // Get the theme name.
@@ -39,8 +39,8 @@ function parrotstripes_theme_generate_validate(&$form, &$form_state) {
   }
 }
 
-function parrotstripes_theme_generate_submit(&$form, &$form_state) {
-  //drupal_set_message(t('Running <strong>parrotstripes_theme_generate_submit()</strong>'));
+function dsp1_theme_generate_submit(&$form, &$form_state) {
+  //drupal_set_message(t('Running <strong>dsp1_theme_generate_submit()</strong>'));
   $build_info = $form_state->getBuildInfo();
   $themeHandler = \Drupal::service('theme_handler');
   // Get the theme name.

@@ -455,7 +455,7 @@ nav.navigation {
           color: $menuitemColor;
           text-decoration: none;
           
-          @include parrotstripesTransition(all, 0.25s, ease-in-out);
+          @include dsp1Transition(all, 0.25s, ease-in-out);
           
           &:hover {
             opacity: 0.85;
@@ -533,16 +533,16 @@ header#header-outer-wrapper {
   }
 }
 @media all and (max-width: 959px) {
-  #block-parrotstripes-branding {
+  #block-dsp1-branding {
     width: 81.33333% !important;
     margin-right: 1% !important;
     margin-left: 1% !important;
     float: left;
   }
-  #block-parrotstripes-branding:first-of-type {
+  #block-dsp1-branding:first-of-type {
     margin-left: 0 !important;
   }
-  #block-parrotstripes-branding:last-of-type {
+  #block-dsp1-branding:last-of-type {
     margin-right: 0 !important;
   }
 
@@ -560,16 +560,16 @@ header#header-outer-wrapper {
   }
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-  #block-parrotstripes-branding {
+  #block-dsp1-branding {
     width: 780px !important;
     margin-right: 10px !important;
     margin-left: 10px !important;
     float: left;
   }
-  #block-parrotstripes-branding:first-of-type {
+  #block-dsp1-branding:first-of-type {
     margin-left: 0 !important;
   }
-  #block-parrotstripes-branding:last-of-type {
+  #block-dsp1-branding:last-of-type {
     margin-right: 0 !important;
   }
 
@@ -587,16 +587,16 @@ header#header-outer-wrapper {
   }
 }
 @media all and (min-width: 1280px) {
-  #block-parrotstripes-branding {
+  #block-dsp1-branding {
     width: 980px !important;
     margin-right: 10px !important;
     margin-left: 10px !important;
     float: left;
   }
-  #block-parrotstripes-branding:first-of-type {
+  #block-dsp1-branding:first-of-type {
     margin-left: 0 !important;
   }
-  #block-parrotstripes-branding:last-of-type {
+  #block-dsp1-branding:last-of-type {
     margin-right: 0 !important;
   }
 

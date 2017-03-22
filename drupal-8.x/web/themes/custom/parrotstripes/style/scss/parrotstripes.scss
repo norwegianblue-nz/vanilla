@@ -1,4 +1,4 @@
-@import "parrotstripes_mixins", "parrotstripes-style-vars", "parrotstripes-default-style-vars", "parrotstripesgs";
+@import "dsp1_mixins", "dsp1-style-vars", "dsp1-default-style-vars", "dsp1gs";
 ////////////////////////////////////////////////////////////////////////////////
 //
 // SANDBOX 
@@ -100,15 +100,15 @@ h2 {float:left;}
 
 // Header - split into two for branding and user menu
 @media all and (max-width: 959px) {
-    #block-parrotstripes-branding {@include parrotCols(9, 12, normal, '100');float:left;}
+    #block-dsp1-branding {@include parrotCols(9, 12, normal, '100');float:left;}
     #block-loginformpopup {@include parrotCols(3, 12, normal, '100');float:right;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-    #block-parrotstripes-branding {@include parrotCols(10, 12, normal, '960');float:left;}
+    #block-dsp1-branding {@include parrotCols(10, 12, normal, '960');float:left;}
     #block-loginformpopup {@include parrotCols(2, 12, normal, '960');float:right;}
 }
 @media all and (min-width: 1280px) {
-    #block-parrotstripes-branding {@include parrotCols(10, 12, normal, '1200');float:left;}
+    #block-dsp1-branding {@include parrotCols(10, 12, normal, '1200');float:left;}
     #block-loginformpopup {@include parrotCols(2, 12, normal, '1200');float:right;}
 }
 

@@ -59,30 +59,30 @@ Comfortaa:
 #      //fonts.googleapis.com/css?family=Oxygen:300: { type: external }
       
 
-parrotstripes:
+dsp1:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
-    title: 'Default library for parrotstripes.'
-    description: 'Default Parrotstripes library.'
+    title: 'Default library for dsp1.'
+    description: 'Default Dsp1 library.'
     scss: 
-      style/css/parrotstripes.css: 'style/scss/parrotstripes.scss'
+      style/css/dsp1.css: 'style/scss/dsp1.scss'
   version: VERSION
   js:
     # Custom Javascript file for your own JS modifications.
     # Examples of behaviors in JS file.
-    js/parrotstripes.js: {}
+    js/dsp1.js: {}
     
   css:
     theme:
       # Custom CSS file to be loaded in all media circumstances
-      style/css/parrotstripes.css: {}
+      style/css/dsp1.css: {}
   dependencies:
 #      - core/modernizr
 #     - core/jquery
 #     - core/drupal
 #     - core/drupalSettings
-parrotstripes_base:
+dsp1_base:
   omega:
     allow_clone_for_subtheme: false
     allow_enable_disable: false
@@ -90,7 +90,7 @@ parrotstripes_base:
     description: 'Primary CSS & Javascript/jQuery. This file should not ever be disabled.'
     scss: 
       style/css/base.css: 'style/scss/base.scss'
-      style/css/layout/parrotstripes_default-layout.css: 'style/scss/layout/parrotstripes_default-layout.scss'
+      style/css/layout/dsp1_default-layout.css: 'style/scss/layout/dsp1_default-layout.scss'
   version: VERSION
   js:
     js/omega.js: {}
@@ -98,7 +98,7 @@ parrotstripes_base:
     component:
       style/css/base.css: {}
     layout: 
-      style/css/layout/parrotstripes_default-layout.css: {}
+      style/css/layout/dsp1_default-layout.css: {}
   dependencies:
     - core/modernizr
     - core/jquery
@@ -110,7 +110,7 @@ parrotstripes_base:
     - core/jquery.once
     - core/drupal.displace
 
-parrotstripes_admin:  
+dsp1_admin:  
   omega:
     allow_clone_for_subtheme: false
     allow_enable_disable: false
@@ -138,7 +138,7 @@ parrotstripes_admin:
     - core/jquery.ui.slider
     - core/jquery.ui.resizable
     
-parrotstripes_html_elements:
+dsp1_html_elements:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -153,7 +153,7 @@ parrotstripes_html_elements:
   dependencies:
 #    - omega/omega
     
-parrotstripes_branding:
+dsp1_branding:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -168,7 +168,7 @@ parrotstripes_branding:
   dependencies:
 #    - omega/omega
     
-parrotstripes_breadcrumbs:
+dsp1_breadcrumbs:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -183,7 +183,7 @@ parrotstripes_breadcrumbs:
   dependencies:
 #    - omega/omega
     
-parrotstripes_main_menus:
+dsp1_main_menus:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -198,7 +198,7 @@ parrotstripes_main_menus:
   dependencies:
 #    - omega/omega
     
-parrotstripes_messages:
+dsp1_messages:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -213,7 +213,7 @@ parrotstripes_messages:
   dependencies:
 #    - omega/omega
     
-parrotstripes_pagers:
+dsp1_pagers:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -228,7 +228,7 @@ parrotstripes_pagers:
   dependencies:
 #    - omega/omega
     
-parrotstripes_tabs:
+dsp1_tabs:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -243,7 +243,7 @@ parrotstripes_tabs:
   dependencies:
 #    - omega/omega
     
-parrotstripes_taxonomy_terms:
+dsp1_taxonomy_terms:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true
@@ -258,7 +258,7 @@ parrotstripes_taxonomy_terms:
   dependencies:
 #    - omega/omega
 
-parrotstripes_forms:
+dsp1_forms:
   omega:
     allow_clone_for_subtheme: true
     allow_enable_disable: true

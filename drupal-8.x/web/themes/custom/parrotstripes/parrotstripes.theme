@@ -18,7 +18,7 @@ use Drupal\Component\Render\FormattableMarkup;
  * 
  * @return array
  */
-function parrotstripes_theme() {
+function dsp1_theme() {
   return array(
     'omega_indicator' => array(
       'variables' => array(
@@ -29,7 +29,7 @@ function parrotstripes_theme() {
   );
 } /* END omega_theme */
 
-function parrotstripes_preprocess_omega_indicator(&$vars) {
+function dsp1_preprocess_omega_indicator(&$vars) {
   
   $img = base_path() . drupal_get_path('theme', 'omega') . '/logo.png';
   $logo_image = new FormattableMarkup('<img src=":image" />', array(':image' => $img));
@@ -50,14 +50,14 @@ function parrotstripes_preprocess_omega_indicator(&$vars) {
 /**
  * Implements hook_preprocess().
  */
-function parrotstripes_preprocess(&$variables, $hook) {
+function dsp1_preprocess(&$variables, $hook) {
   
 } /* END omega_preprocess */
 
 /**
  * Implements hook_page_attachments_alter().
  */
-function parrotstripes_page_attachments_alter (&$attachments) {
+function dsp1_page_attachments_alter (&$attachments) {
   
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   // require omega.js library
@@ -109,11 +109,11 @@ function parrotstripes_page_attachments_alter (&$attachments) {
   //dpm($attachments);
 } /* END omega_page_attachments_alter */
 
-function parrotstripes_preprocess_html(&$vars) {
+function dsp1_preprocess_html(&$vars) {
   
 } /* END omega_preprocess_html */
 
-function parrotstripes_css_alter(&$css) {
+function dsp1_css_alter(&$css) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   
   // appears we need a cache rebuild after editing options invoked here
@@ -123,7 +123,7 @@ function parrotstripes_css_alter(&$css) {
   $hasLayout = isset($ogsLayout) ? $ogsLayout : TRUE;
   // default Omega core layout which is always loaded first, then replaced with the appropriately selected
   // layout from the active theme being used for page display.
-  $defaultOmegaLayout = drupal_get_path('theme', 'parrotstripes') . '/style/css/layout/parrotstripes_default-layout.css';
+  $defaultOmegaLayout = drupal_get_path('theme', 'dsp1') . '/style/css/layout/dsp1_default-layout.css';
   // setup default layout for active theme
   $defaultLayout = omega_return_active_layout();
   
@@ -154,7 +154,7 @@ function parrotstripes_css_alter(&$css) {
 /**
  * Implements hook_js_alter().
  */
-function parrotstripes_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+function dsp1_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
 
 } /* END omega_js_alter */
 
@@ -162,7 +162,7 @@ function parrotstripes_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsI
  * Implements hook_preprocess_HOOK() for page templates.
  *
  */
-function parrotstripes_preprocess_page(&$vars) {
+function dsp1_preprocess_page(&$vars) {
   
   //$page = $vars['page'];
   $theme = \Drupal::theme()->getActiveTheme()->getName();
@@ -308,7 +308,7 @@ $Node = \Drupal::routeMatch()->getParameter('node');
  * Implements hook_preprocess_HOOK() for region templates.
  *
  */
-function parrotstripes_preprocess_region(&$vars) {
+function dsp1_preprocess_region(&$vars) {
   // add a region class in the format region--REGION-NAME
   $altered_region_id = str_replace("_", "-", $vars['region']);
   $vars['attributes']['class'][] = 'region--' . $altered_region_id;
@@ -319,7 +319,7 @@ function parrotstripes_preprocess_region(&$vars) {
  * Implements hook_preprocess_HOOK() for node templates.
  * @param array $vars
  */
-function parrotstripes_preprocess_node(&$vars) {
+function dsp1_preprocess_node(&$vars) {
   
 } /* END omega_preprocess_node */
 
@@ -327,7 +327,7 @@ function parrotstripes_preprocess_node(&$vars) {
  * Implements hook_preprocess_HOOK() for block templates.
  * @param array $vars
  */
-function parrotstripes_preprocess_block(&$vars) {
+function dsp1_preprocess_block(&$vars) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   switch ($vars['base_plugin_id']) {
     case 'system_powered_by_block':
@@ -345,7 +345,7 @@ function parrotstripes_preprocess_block(&$vars) {
  * Implements hook_preprocess_HOOK() for block templates.
  * @param array $vars
  */
-function parrotstripes_preprocess_field(&$vars) {
+function dsp1_preprocess_field(&$vars) {
   $field_type = $vars['field_type'];
   
   if ($field_type == 'entity_reference') {
@@ -367,7 +367,7 @@ function parrotstripes_preprocess_field(&$vars) {
  * hook_html_head_alter()
  * @param $head_elements
  */
-function parrotstripes_html_head_alter(&$head_elements) {
+function dsp1_html_head_alter(&$head_elements) {
   // cleartype
   $head_elements['omega_meta_clear_type'] = array(
     '#type' => 'html_tag',

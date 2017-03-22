@@ -2,7 +2,7 @@
 
 // Include Breakpoint Functionality
 use Drupal\breakpoint;
-use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
+use Drupal\dsp1\Theme\OmegaSettingsInfo;
 
 /**
  * Function returns the trimmed name of the breakpoint id
@@ -10,7 +10,7 @@ use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
  * @param \Drupal\breakpoint\Breakpoint $breakpoint
  * @return mixed
  */
-function parrotstripes_return_clean_breakpoint_id(\Drupal\breakpoint\Breakpoint $breakpoint) {
+function dsp1_return_clean_breakpoint_id(\Drupal\breakpoint\Breakpoint $breakpoint) {
   return str_replace($breakpoint->getGroup() . '.', "", $breakpoint->getBaseId());
 }
 
@@ -19,7 +19,7 @@ function parrotstripes_return_clean_breakpoint_id(\Drupal\breakpoint\Breakpoint 
  * @param $theme
  * @return array|mixed|null
  */
-function parrotstripes_return_layouts($theme) {
+function dsp1_return_layouts($theme) {
   
   // grab the defined layouts in config/install/$theme.layouts.yml
   $layouts = \Drupal::config($theme . '.omega-layouts')->get();
@@ -40,7 +40,7 @@ function parrotstripes_return_layouts($theme) {
  * @param $theme
  * @return int|string
  */
-function parrotstripes_find_layout_provider($theme) {
+function dsp1_find_layout_provider($theme) {
   // Create Omega Settings Object
   $omegaSettings = new OmegaSettingsInfo($theme);
   
@@ -85,14 +85,14 @@ function parrotstripes_find_layout_provider($theme) {
 /**
  * Custom function to return the active layout to be used for the active page.
  */
-function parrotstripes_return_active_layout() {
+function dsp1_return_active_layout() {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   $front = \Drupal::service('path.matcher')->isFrontPage();
   $node = \Drupal::routeMatch()->getParameter('node');
   $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
   /*$view = \Drupal::routeMatch()->getParameter('view_id');*/
   
-  $layoutProvider = parrotstripes_find_layout_provider($theme);
+  $layoutProvider = dsp1_find_layout_provider($theme);
   //dpm($layoutProvider);
   // setup default layout
   $defaultLayout = theme_get_setting('default_layout', $layoutProvider);

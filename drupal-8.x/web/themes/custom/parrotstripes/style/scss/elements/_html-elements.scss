@@ -1,4 +1,4 @@
-@import "parrotstripes-style-vars", "parrotstripes-default-style-vars";
+@import "dsp1-style-vars", "dsp1-default-style-vars";
 
 // Apply a natural box layout model to all elements http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 *, *:before, *:after {
@@ -32,7 +32,7 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
 a {
   text-decoration: none;
   color: rgba($primaryColor2, 1);
-  @include parrotstripesTransition(opacity, 0.25s, ease-in-out);
+  @include dsp1Transition(opacity, 0.25s, ease-in-out);
   &:hover {
     text-decoration: none;
     border-bottom: none;

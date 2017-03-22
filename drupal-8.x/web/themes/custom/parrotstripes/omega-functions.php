@@ -2,7 +2,7 @@
 
 // Include Breakpoint Functionality
 use Drupal\breakpoint;
-use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
+use Drupal\dsp1\Theme\OmegaSettingsInfo;
 
 /**
  * Function returns the trimmed name of the breakpoint id

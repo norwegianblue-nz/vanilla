@@ -1,4 +1,4 @@
-@import "parrotstripes-style-vars", "parrotstripes-default-style-vars";
+@import "dsp1-style-vars", "dsp1-default-style-vars";
 
 
 #site-branding {
@@ -27,8 +27,8 @@
     height: auto;
     margin-right: 25px;
     
-    @include parrotstripesTransition(all, 0.25s, ease-in-out);
-    //@include parrotstripesCorners(10px);
+    @include dsp1Transition(all, 0.25s, ease-in-out);
+    //@include dsp1Corners(10px);
     
     //background: rgba($primaryColor3, 1);
     
@@ -42,7 +42,7 @@
     
     img {
       display: block;
-      //@include parrotstripesCorners(10px);
+      //@include dsp1Corners(10px);
     }
     
   }
@@ -65,7 +65,7 @@
     color: $siteTitleColor;
     
     a {
-      @include parrotstripesTransition(all, 0.25s, ease-in-out);
+      @include dsp1Transition(all, 0.25s, ease-in-out);
       //opacity: .5;
       text-decoration: none;
       color: $siteTitleColor;
