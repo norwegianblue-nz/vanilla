@@ -1,0 +1,44 @@
+#!/bin/bash
+##
+## Script to export database for current site
+## 
+## This requires environment variables src_alias, dbprefix & tables_key to
+## be set.
+## It is expected that these are set for the current shell.
+## 
+## The exported data file is placed in the web/config/sync directory if it exists,
+## else in the current directory.
+## Thus it is expected to run this script from the drupal-8.x directory within
+## websites toplevel (ie /var/www/vhosts/<sitename>/drupal-8.x
+
+
+
+if [  -z $src_alias ]
+then
+	kdialog --sorry "src_alias env var is not set \n\nScript will exit" --title "Whoops"
+	exit
+fi
+if [  -z $dbprefix ]
+then
+	kdialog --sorry "dbprefix env var is not set \n\nScript will exit" --title "Whoops"
+	exit
+fi
+if [  -z $tables_key ]
+then
+	kdialog --sorry "tables_key env var is not set \n\nScript will exit" --title "Whoops"
+	exit
+fi
+OLDDIR=$PWD
+
+if [ -d web/config/sync ]
+then
+	cd web/config/sync
+fi
+
+## echo 'drush '$src_alias' sql-dump --tables-key='$tables_key' --structure-tables-key=common --result-file='$PWD'/data.sql'
+drush $src_alias sql-dump --tables-key=$tables_key --structure-tables-key=common --result-file=$PWD/data.sql
+
+
+# kdialog --msgbox 'data.sql created in '$PWD'\nUse git add to include in the repository'
+echo 'data.sql created in '$PWD'\nUse git add to include in the repository'
+cd $OLDDIR

@@ -21,3 +21,6 @@ drupal-8.x/web/sites/*.yml
 
 
 drupal-8.x/web/sites/*/settings.local.php
+# Ignore netbeans stuff
+drupal-8.x/.netbeans.xml
+nbproject
