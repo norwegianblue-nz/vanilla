@@ -308,7 +308,7 @@ function _omega_compile_layout_sass($layout, $layoutName, $theme = 'omega', $opt
   foreach($breakpoints as $breakpoint) {
     // create a clean var for the scss for this breakpoint
     $breakpoint_scss = '';
-    $idtrim = dsp1_return_clean_breakpoint_id($breakpoint);
+    $idtrim = parrotstripes_return_clean_breakpoint_id($breakpoint);
     
     // loop over the region groups
     foreach ($region_groups as $gid => $info ) {

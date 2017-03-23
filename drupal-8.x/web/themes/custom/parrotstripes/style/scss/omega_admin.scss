@@ -1,5 +1,5 @@
 $twidth: 100%; 
-@import 'dsp1gs';
+@import 'parrotstripesgs';
 
 @mixin simpleTransition($type:all, $speed:0.25s, $transition: ease-in-out) {
   transition: $type $speed $transition;

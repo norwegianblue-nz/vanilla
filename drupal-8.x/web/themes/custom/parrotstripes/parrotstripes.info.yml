@@ -1,19 +1,19 @@
-name: Dsp1
+name: Parrotstripes
 type: theme
-description: 'A Custom Theme based on Omega5'
+description: 'A Custom Theme based on ParrotStripes fork of Omega5'
 package: norwegian.blue
 base theme: classy
 force_export: false
 inherit_layout: false
 scss_support: true
 libraries:
-  - dsp1/dsp1
-  - dsp1/base
-  - dsp1/OpenSans
-  - dsp1/WorkSans
-  - dsp1/Comfortaa
+  - parrotstripes/parrotstripes
+  - parrotstripes/base
+  - parrotstripes/OpenSans
+  - parrotstripes/WorkSans
+  - parrotstripes/Comfortaa
 ckeditor_stylesheets:
-  - style/css/dsp1.css
+  - style/css/parrotstripes.css
   - style/css/base.css
   - css/components/table.css
   - fonts/worksans.css
@@ -58,7 +58,7 @@ features:
   secondary_menu: true
 version: 8.x-5.x-alpha1
 core: 8.x
-project: dsp1
+project: parrotstripes
 datestamp: 1469485442
 libraries-override:
   omega/omega_html_elements:

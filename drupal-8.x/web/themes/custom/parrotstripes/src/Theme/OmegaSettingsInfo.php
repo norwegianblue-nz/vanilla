@@ -5,7 +5,7 @@
  * Contains \Drupal\omega\Theme\OmegaSettingsInfo.
  */
 
-namespace Drupal\dsp1\Theme;
+namespace Drupal\parrotstripes\Theme;
 
 /**
  * OmegaSettingsInfo declares methods used to return theme info for use in

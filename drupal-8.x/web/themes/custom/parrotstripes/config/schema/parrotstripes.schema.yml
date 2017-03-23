@@ -1,5 +1,5 @@
 # Schema for the configuration files of the Omega theme.
 
-dsp1.settings:
+parrotstripes.settings:
   type: theme_settings
-  label: 'Dsp1 O_Five Settings'
+  label: 'Parrotstripes O_Five Settings'

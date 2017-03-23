@@ -4,7 +4,7 @@
 // @media all and (min-width: $desktop) and (max-width: $below_desktopWide)
 // @media all and (min-width: $desktopWide)
 
-@import "dsp1-style-vars", "dsp1-default-style-vars";
+@import "parrotstripes-style-vars", "parrotstripes-default-style-vars";
 
 nav.navigation {
   ul {
@@ -53,7 +53,7 @@ nav.navigation {
           color: $menuitemColor;
           text-decoration: none;
           
-          @include dsp1Transition(all, 0.25s, ease-in-out);
+          @include parrotstripesTransition(all, 0.25s, ease-in-out);
           
           &:hover {
             opacity: 0.85;

@@ -1,6 +1,6 @@
 <?php
 
-use Drupal\dsp1\Theme\OmegaSettingsInfo;
+use Drupal\parrotstripes\Theme\OmegaSettingsInfo;
 
 require_once 'omega-functions.php';
 require_once 'omega-functions--admin.php';

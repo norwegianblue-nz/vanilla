@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\dsp1\Theme\OmegaInfo.
+ * Contains \Drupal\parrotstripes\Theme\OmegaInfo.
  */
 
-namespace Drupal\dsp1\Theme;
+namespace Drupal\parrotstripes\Theme;
 
 /**
  * omegaInfo declares methods used to return theme info

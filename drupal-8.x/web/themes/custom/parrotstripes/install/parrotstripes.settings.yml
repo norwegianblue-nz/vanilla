@@ -15,7 +15,7 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: 'sites/kidsrestorethekepler/themes/custom/dsp1/logo.png'
+  path: 'sites/kidsrestorethekepler/themes/custom/parrotstripes/logo.png'
 favicon:
   use_default: true
   path: ''
@@ -28,8 +28,8 @@ default_layout: primary
 home_layout: front
 enable_omegags_layout: 1
 layouts: {  }
-breakpoint_group_primary: dsp1.standard
-breakpoint_group_front: dsp1.standard
+breakpoint_group_primary: parrotstripes.standard
+breakpoint_group_front: parrotstripes.standard
 edit_this_layout: front
 node_type_article_layout: primary
 node_type_page_layout: primary

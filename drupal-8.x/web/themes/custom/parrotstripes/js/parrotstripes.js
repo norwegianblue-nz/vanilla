@@ -24,8 +24,8 @@ $jq(document).on("scroll", function(){
  * Toggle 'expand' when a button clicked
  */
 $jq('.tool-bar-icon-login').click(function(){
-    if($jq('#block-dsp1-search').hasClass("expand")){
-        $jq('#block-dsp1-search').toggleClass("expand");
+    if($jq('#block-parrotstripes-search').hasClass("expand")){
+        $jq('#block-parrotstripes-search').toggleClass("expand");
         $jq('.tool-bar-icon-search').toggleClass("clicked");
     }
     if($jq('#block-toolbarinfo').hasClass("expand")){
@@ -44,12 +44,12 @@ $jq('.tool-bar-icon-search').click(function(){
         $jq('#block-toolbarinfo').toggleClass("expand");
         $jq('.tool-bar-icon-info').toggleClass("clicked");
     }
-    $jq('#block-dsp1-search').toggleClass("expand");
+    $jq('#block-parrotstripes-search').toggleClass("expand");
     $jq(this).toggleClass("clicked");
 });
 $jq('.tool-bar-icon-info').click(function(){
-    if($jq('#block-dsp1-search').hasClass("expand")){
-        $jq('#block-dsp1-search').toggleClass("expand");
+    if($jq('#block-parrotstripes-search').hasClass("expand")){
+        $jq('#block-parrotstripes-search').toggleClass("expand");
         $jq('.tool-bar-icon-search').toggleClass("clicked");
     }
     if($jq('#block-userlogin').hasClass("expand")){

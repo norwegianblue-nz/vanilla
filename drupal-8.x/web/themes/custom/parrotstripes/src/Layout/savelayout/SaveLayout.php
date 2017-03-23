@@ -5,7 +5,7 @@
  * Contains \Drupal\views\Form\ViewsForm.
  */
 
-namespace Drupal\dsp1\savelayout;
+namespace Drupal\parrotstripes\savelayout;
 
 /**
  * 

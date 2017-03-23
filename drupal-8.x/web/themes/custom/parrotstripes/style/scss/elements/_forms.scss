@@ -1,4 +1,4 @@
-@import "dsp1-style-vars", "dsp1-default-style-vars";
+@import "parrotstripes-style-vars", "parrotstripes-default-style-vars";
 
 .form-type-textfield, // normal text fields
 .field--type-entity-reference, // autocomplete fields 
@@ -18,8 +18,8 @@
     font-weight: normal;
     border: 2px solid $primaryColor3;
     
-    @include dsp1Corners(3px);
-    @include dsp1Shadow();
+    @include parrotstripesCorners(3px);
+    @include parrotstripesShadow();
     &:focus {
       border: 2px solid $primaryColor1;
     }
@@ -32,8 +32,8 @@
     font-weight: normal;
     border: 2px solid $primaryColor3;
     
-    @include dsp1Corners(3px);
-    @include dsp1Shadow();
+    @include parrotstripesCorners(3px);
+    @include parrotstripesShadow();
     &:focus {
       border: 2px solid $primaryColor1;
     }
@@ -59,8 +59,8 @@
       font-weight: normal;
       border: 2px solid $primaryColor3;
       
-      @include dsp1Corners(3px);
-      @include dsp1Shadow();
+      @include parrotstripesCorners(3px);
+      @include parrotstripesShadow();
       &:focus {
         border: 2px solid $primaryColor1;
       }
@@ -91,8 +91,8 @@ input.button {
   font-size: 1em;
   color: $primaryColor5;
   
-  @include dsp1Corners(3px);
-  @include dsp1Shadow();
+  @include parrotstripesCorners(3px);
+  @include parrotstripesShadow();
   
   
   &:hover,

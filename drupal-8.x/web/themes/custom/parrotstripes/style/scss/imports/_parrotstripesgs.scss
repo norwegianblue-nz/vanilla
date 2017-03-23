@@ -125,7 +125,7 @@ body {
     //margin: 0 $rightmargin 0 0;
     margin-right: $rightmargin;
   }
-  @if $margin == 'dsp1' {
+  @if $margin == 'parrotstripes' {
     @if $twidth == 100% {
       $leftmargin: $leftmargin * 2;
     }
