@@ -31,6 +31,7 @@ mkdir -p /var/www/vhosts/$newsite/tmp
 cd /var/www/vhosts/$newsite
 composer --quiet create-project drupal-composer/drupal-project:8.x-dev drupal-8.x --stability dev --no-interaction
 ln -s drupal-8.x/web htdocs
+mkdir -p drupal-8.x/web/config/sync
 cp -a /var/www/vhosts/vanilla/drupal-8.x/web/sites/newsite drupal-8.x/web/sites/$newsite
 cp drupal-8.x/web/sites/example.sites.php drupal-8.x/web/sites/sites.php
 sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.php
@@ -51,6 +52,11 @@ composer require --quiet "drupal/libraries"
 composer require --quiet "drupal/pathauto"
 composer require --quiet "drupal/token"
 composer require --quiet "drupal/omega"
+composer require --quiet "drupal/ds"
+composer require --quiet "drupal/paragraphs"
+composer require --quiet "drupal/responsive_menu"
+composer require --quiet "drupal/contact_block"
+composer require --quiet "drupal/inline_responsive_images"
 composer require --quiet --dev "drupal/devel"
 git init
 cp -f $vanilla/scaffold/gitignore ./.gitignore

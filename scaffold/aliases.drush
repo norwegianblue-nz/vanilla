@@ -14,7 +14,7 @@ $aliases["newsitealias"] = array (
       array (
         'database' => 'drupal8db',
         'username' => 'd8user',
-        'password' => 'drup4l',
+        'password' => 'password',
         'prefix' => 
         array (
           'default' => 'newsite_',
