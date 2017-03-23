@@ -12,20 +12,20 @@ before using the scripts,<br>
  copy  'sites/example.settings.local.php' <br>
  to    'sites/newsite/settings.local.php' <br>
  and add the following immediately after the <?php<br>
-  /**<br>
-   * Database settings:<br>
-   */<br>
+<pre>  /**
+   * Database settings:
+   */
   
-  $databases['default']['default'] = array (<br>
-    'database' => 'drupal8db',<br>
-    'username' => 'd8user',<br>
-    'password' => 'password',<br>
-    'prefix' => 'newsite_',<br>
-    'host' => 'localhost',<br>
-    'port' => '3306',<br>
-    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',<br>
-    'driver' => 'mysql',<br>
-  );<br>
+  $databases['default']['default'] = array (
+    'database' => 'drupal8db',
+    'username' => 'd8user',
+    'password' => 'password',
+    'prefix' => 'newsite_',
+    'host' => 'localhost',
+    'port' => '3306',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+  );</pre><br>
  Modify the database name and authentication details to those you use.<br>
 <br>
 Similarly, the aliases entry has dummy database details.<br>
