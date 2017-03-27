@@ -40,11 +40,11 @@ fi
 ## echo 'drush '$src_alias' sql-dump --tables-key='$tables_key' --structure-tables-key=common --result-file='$PWD'/data.sql'
 drush $src_alias sql-dump --tables-key=$tables_key --structure-tables-key=common --result-file=$PWD/data.sql
 # Ensure no INSERT statements for the cache_* tables etc. (comment them out)
-sed -i -- 's/INSERT INTO `'$dbprfx'_cache/# INSERT INTO `'$dbprfx'_cache/g'       $sitedir.sql
-sed -i -- 's/INSERT INTO `'$dbprfx'_history/# INSERT INTO `'$dbprfx'_history/g'   $sitedir.sql
-sed -i -- 's/INSERT INTO `'$dbprfx'_search/# INSERT INTO `'$dbprfx'_search/g'     $sitedir.sql
-sed -i -- 's/INSERT INTO `'$dbprfx'_sessions/# INSERT INTO `'$dbprfx'_sessions/g' $sitedir.sql
-sed -i -- 's/INSERT INTO `'$dbprfx'_watchdog/# INSERT INTO `'$dbprfx'_watchdog/g' $sitedir.sql
+sed -i -- 's/INSERT INTO `'$dbprefix'_cache/# INSERT INTO `'$dbprefix'_cache/g'       data.sql
+sed -i -- 's/INSERT INTO `'$dbprefix'_history/# INSERT INTO `'$dbprefix'_history/g'   data.sql
+sed -i -- 's/INSERT INTO `'$dbprefix'_search/# INSERT INTO `'$dbprefix'_search/g'     data.sql
+sed -i -- 's/INSERT INTO `'$dbprefix'_sessions/# INSERT INTO `'$dbprefix'_sessions/g' data.sql
+sed -i -- 's/INSERT INTO `'$dbprefix'_watchdog/# INSERT INTO `'$dbprefix'_watchdog/g' data.sql
 
 
 # kdialog --msgbox 'data.sql created in '$PWD'\nUse git add to include in the repository'
