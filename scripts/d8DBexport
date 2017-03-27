@@ -35,8 +35,16 @@ then
 	cd web/config/sync
 fi
 
+# Dump the database 
+
 ## echo 'drush '$src_alias' sql-dump --tables-key='$tables_key' --structure-tables-key=common --result-file='$PWD'/data.sql'
 drush $src_alias sql-dump --tables-key=$tables_key --structure-tables-key=common --result-file=$PWD/data.sql
+# Ensure no INSERT statements for the cache_* tables etc. (comment them out)
+sed -i -- 's/INSERT INTO `'$dbprfx'_cache/# INSERT INTO `'$dbprfx'_cache/g'       $sitedir.sql
+sed -i -- 's/INSERT INTO `'$dbprfx'_history/# INSERT INTO `'$dbprfx'_history/g'   $sitedir.sql
+sed -i -- 's/INSERT INTO `'$dbprfx'_search/# INSERT INTO `'$dbprfx'_search/g'     $sitedir.sql
+sed -i -- 's/INSERT INTO `'$dbprfx'_sessions/# INSERT INTO `'$dbprfx'_sessions/g' $sitedir.sql
+sed -i -- 's/INSERT INTO `'$dbprfx'_watchdog/# INSERT INTO `'$dbprfx'_watchdog/g' $sitedir.sql
 
 
 # kdialog --msgbox 'data.sql created in '$PWD'\nUse git add to include in the repository'
