@@ -15,8 +15,13 @@
 
 if [  -z $src_alias ]
 then
+    if [ -r ../export_env ]
+    then
+        source ../export_env
+    else
 	kdialog --sorry "src_alias env var is not set \n\nScript will exit" --title "Whoops"
 	exit
+    fi
 fi
 if [  -z $dbprefix ]
 then
@@ -48,5 +53,6 @@ sed -i -- 's/INSERT INTO `'$dbprefix'_watchdog/# INSERT INTO `'$dbprefix'_watchd
 
 
 # kdialog --msgbox 'data.sql created in '$PWD'\nUse git add to include in the repository'
-echo 'data.sql created in '$PWD'\nUse git add to include in the repository'
+echo 'data.sql created in '$PWD
+echo 'Use git add to include in the repository'
 cd $OLDDIR

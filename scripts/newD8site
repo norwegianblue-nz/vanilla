@@ -41,6 +41,10 @@ newsitealias=$(kdialog --title "Drush Alias" --inputbox "Input the Drush Alias f
 sed -i -- 's/newsitealias/'$newsitealias'/g' aliases.drush
 sed -i -- 's/newsite/'$newsite'/g' aliases.drush
 cat aliases.drush >> /etc/drush/aliases.drushrc.php
+cp $vanilla/scaffold/export_env .
+sed -i -- 's/newsitealias/'$newsitealias'/g' export_env
+sed -i -- 's/newsite/'$newsite'/g' export_env
+
 cd drupal-8.x
 composer require --quiet "drupal/address"
 composer require --quiet "drupal/admin_toolbar"
