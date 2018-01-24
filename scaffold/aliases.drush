@@ -17,7 +17,7 @@ $aliases["newsitealias"] = array (
         'password' => 'password',
         'prefix' => 
         array (
-          'default' => 'newsite_',
+          'default' => 'dbprefix_',
         ),
         'host' => 'localhost',
         'port' => '3306',

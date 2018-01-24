@@ -20,7 +20,7 @@ newsite=$(kdialog --title "New Site Name" --inputbox "Input the new site name (e
     if [  ! $ans = 0 ]; then
             exit
     fi
-examplealias=$newsite-dev
+examplealias=$newsite-scud
 kdialog --yesno  "Creating $newsite.\nIs this correct? Continue?\n(It will take a few minutes)"
 	ans=$?
     if [  ! $ans = 0 ]; then
@@ -34,16 +34,21 @@ ln -s drupal-8.x/web htdocs
 mkdir -p drupal-8.x/web/config/sync
 cp -a /var/www/vhosts/vanilla/drupal-8.x/web/sites/newsite drupal-8.x/web/sites/$newsite
 cp drupal-8.x/web/sites/example.sites.php drupal-8.x/web/sites/sites.php
+pfx=$(echo $newsite | cut -d'.' -f1)
+dbprefix=$(kdialog --title "Database Prefix" --inputbox "Input the Database Prefix for the new site(eg $pfx). An underscore will be appended to your choice" "$pfx")
+
 sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.php
 sed -i -- 's/newsite/'$newsite'/g' drupal-8.x/web/sites/$newsite/settings.local.php
 cp $vanilla/scaffold/aliases.drush .
 newsitealias=$(kdialog --title "Drush Alias" --inputbox "Input the Drush Alias for the new site name (eg $examplealias)" "$examplealias")
 sed -i -- 's/newsitealias/'$newsitealias'/g' aliases.drush
 sed -i -- 's/newsite/'$newsite'/g' aliases.drush
+sed -i -- 's/dbprefix/'$dbprefix'/g' aliases.drush
 cat aliases.drush >> /etc/drush/aliases.drushrc.php
 cp $vanilla/scaffold/export_env .
 sed -i -- 's/newsitealias/'$newsitealias'/g' export_env
 sed -i -- 's/newsite/'$newsite'/g' export_env
+sed -i -- 's/dbprefix/'$dbprefix'/g' export_env
 
 cd drupal-8.x
 composer require --quiet "drupal/address"
@@ -62,9 +67,39 @@ composer require --quiet "drupal/responsive_menu"
 composer require --quiet "drupal/contact_block"
 composer require --quiet "drupal/inline_responsive_images"
 composer require --quiet --dev "drupal/devel"
+composer require --quiet "drupal/seo_checklist"
+composer require --quiet "drupal/redirect"
+composer require --quiet "drupal/metatag"
+composer require --quiet "drupal/xmlsitemap"
+composer require --quiet "drupal/hreflang"
+composer require --quiet "drupal/google_analytics"
+composer require --quiet "drupal/easy_breadcrumb"
+composer require --quiet "drupal/rdfui"
+composer require --quiet "drupal/linkit"
+composer require --quiet "drupal/editor_advanced_link"
+composer require --quiet "drupal/w3c_validator"
+composer require --quiet "drupal/sitemap"
+composer require --quiet "drupal/search404"
+composer require --quiet "drupal/yoast_seo"
+composer require --quiet "drupal/diff"
+composer require --quiet "drupal/scheduler"
+composer require --quiet "drupal/mollom"
+composer require --quiet "drupal/advagg"
+composer require --quiet "drupal/amp"
+composer require --quiet "drupal/amptheme"
+composer require --quiet "drupal/addtoany"
 git init
-cp -f $vanilla/scaffold/gitignore ./.gitignore
-cp -f $vanilla/scaffold/git.info.exclude ./.git/info/exclude
+
+## Change access assuming Apache web server
+## Alter the group appropriately if an alternative webserver in use (e.g. nginx)
+chgrp apache private/ tmp/
+cd drupal-8.x/web
+chgrp -R apache config core modules profiles sites themes web.config update.php autoload.php index.php
+chmod -R g+w config core modules profiles sites themes
+
+
+#cp -f $vanilla/scaffold/gitignore ./.gitignore
+#cp -f $vanilla/scaffold/git.info.exclude ./.git/info/exclude
 
 
 

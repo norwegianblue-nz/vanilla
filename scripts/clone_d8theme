@@ -62,6 +62,8 @@ for file in $(find . -name \*$ucstarttheme\* -exec ls -1 {} \; )
 grep -rl $lcstarttheme . | xargs sed -i "s/$lcstarttheme/$lcthmname/g"
 grep -rl $icstarttheme . | xargs sed -i "s/$icstarttheme/$icthmname/g"
 grep -rl $ucstarttheme . | xargs sed -i "s/$ucstarttheme/$ucthmname/g"
+# Parrotstripes templates have references to 'parrot' in them. Replace these
+grep -rl parrot ./templates | xargs sed -i "s/parrot/$lcthmname/g"
 
 
 cd $DIR
